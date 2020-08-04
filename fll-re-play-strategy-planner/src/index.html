@@ -173,10 +173,11 @@
             text-shadow: none;
         }
     </style>
+
+
     <script src="assets/languages.js"></script>
 
-    <script src="assets/js/language-detector.js">
-    </script>
+    <script src="assets/js/language-detector.js">    </script>
 
 
     <link rel="manifest" href="manifest.webmanifest">
@@ -1190,6 +1191,7 @@
 <script>
     ct=0
     function initpage() {
+        languageInit()
         context = ctx;
         if (ct==0){
             drawBoard()
