@@ -747,6 +747,7 @@ function textFileToArray(filename)
     }
 </script>
 <script>
+        loaded = 0
     function initpage() {
 
         // if (window.localStorage.DRRPGoogleSheet != undefined) {
@@ -840,7 +841,10 @@ function textFileToArray(filename)
 
         // blanksave = getvar()
         checkDarkTheme()
-        loadsave(blanksave)
+        if (loaded == 0) {
+            loadsave(blanksave)
+            loaded = 1
+        }
         try {
             tournamentload()
         } catch {}

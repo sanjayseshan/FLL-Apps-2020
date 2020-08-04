@@ -890,6 +890,7 @@
     }
 </script>
 <script>
+    loaded = 0
     function initpage() {
 
 
@@ -1018,8 +1019,10 @@
         document.getElementById('loadingGif').style.display = 'none'
 
         checkDarkTheme()
-        loadsave(blanksave)
-
+        if (loaded == 0) {
+            loadsave(blanksave)
+            loaded = 1
+        }
 
     }
 
