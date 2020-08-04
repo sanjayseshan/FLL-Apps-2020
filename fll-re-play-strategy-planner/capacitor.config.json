@@ -1,0 +1,11 @@
+{
+  "appId": "com.ev3lessons.replaydrawplan",
+  "appName": "FLL RePlay Strategy Planner",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    
+  },
+  "cordova": {}
+}

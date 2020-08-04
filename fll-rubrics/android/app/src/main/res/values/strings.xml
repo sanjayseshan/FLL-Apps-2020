@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">FLL Rubrics</string>
+    <string name="title_activity_main">FLL Rubrics</string>
+    <string name="package_name">com.ev3lessons.fllrubrics</string>
+    <string name="custom_url_scheme">com.ev3lessons.fllrubrics</string>
+</resources>

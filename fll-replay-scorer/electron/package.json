@@ -1,0 +1,20 @@
+{
+  "name": "FLL_RePlay_Scorer",
+  "version": "1.0.0",
+  "description": "2020 FLL Scorer",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/sanjayseshan/FLL-Apps",
+  "keywords": [
+    "Electron",
+    "FLL"
+  ],
+  "author": "sanjayseshan",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^7.0.1",
+    "electron-packager": "^14.1.0"
+  }
+}

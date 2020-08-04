@@ -1,0 +1,7 @@
+{
+  "name": "fll-rubrics",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

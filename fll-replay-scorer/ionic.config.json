@@ -1,0 +1,8 @@
+{
+  "name": "FLL RePlay Scorer",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

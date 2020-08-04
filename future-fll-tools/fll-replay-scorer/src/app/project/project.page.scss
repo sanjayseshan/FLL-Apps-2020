@@ -1,0 +1,102 @@
+ion-radio-group {
+  all: none;
+}
+
+.rbtd {
+  width: 25%;
+}
+
+// input[type="radio"] {
+//     opacity: 0;
+//     position: fixed;
+//     width: 0;
+//   }
+
+.rbtd input[type="radio"] {
+  // display: none;
+}
+
+.rbtd label {
+  display: inline-block;
+  background-color: #ddd;
+  padding: 4px 11px;
+  font-family: Arial;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.rbtd input[type="radio"]:checked+label {
+  background-color: #bbb;
+}
+
+.wrapping-list .item-content, .wrapping-list .item {
+  overflow: initial;
+  white-space: initial;
+}
+
+.alert-ios .alert-radio-label{
+white-space: pre-line;
+}
+
+.alert-md .alert-radio-label{
+white-space: pre-line;
+}
+
+.alert-wp .alert-radio-label{
+white-space: pre-line;
+}
+
+.alert-ios .alert-radio-label{ white-space: pre-line;}
+.alert-md .alert-radio-label{ white-space: pre-line;}
+.alert-wp .alert-radio-label{ white-space: pre-line;}
+
+ion-label{
+white-space:normal !important;
+}
+
+.alert-md .alert-radio-label,
+.alert-ios .alert-radio-label
+{
+white-space: normal !important;
+}
+
+
+@media(max-width: 1067px) {
+.rbtd {
+    /* width: 50%; */
+    font-size: 80% !important;
+}
+ion-label {
+    font-size: 80% !important;
+}
+}
+
+@media(max-width: 605px) {
+.rbtd {
+    /* width: 50%; */
+    font-size: 80% !important;
+}
+ion-label {
+    font-size: 80% !important;
+}
+.rbbtns {
+  display: block !important;
+}
+}
+
+@media(max-width: 413px) {
+.rbtd {
+    /* width: 50%; */
+    font-size: 70% !important;
+}
+ion-label {
+    font-size: 70% !important;
+}
+
+}
+
+ion-textarea {
+border: 1px solid black !important;
+width: 100% !important;
+height: 100% !important;
+}

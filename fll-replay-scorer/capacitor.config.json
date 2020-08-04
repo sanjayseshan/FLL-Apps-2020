@@ -1,0 +1,13 @@
+{
+  "appId": "com.ev3lessons.FLLRePlayScorer",
+  "appName": "FLL RePlay Scorer",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

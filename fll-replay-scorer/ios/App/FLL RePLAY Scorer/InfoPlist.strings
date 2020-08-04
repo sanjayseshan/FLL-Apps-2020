@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  FLL RePLAY Scorer
+
+  Created by Sanjay Seshan on 7/23/20.
+  Copyright © 2020 Sanjay Seshan. All rights reserved.
+*/
+"CFBundleDisplayName" = "FLL RePlay Scorer";
+
+"CFBundleName" = "FLL RePlay Scorer";

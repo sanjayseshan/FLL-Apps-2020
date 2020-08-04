@@ -1,0 +1,7 @@
+{
+  "name": "fll-replay-scorer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

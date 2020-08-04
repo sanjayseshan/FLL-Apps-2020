@@ -1,0 +1,18 @@
+<div class="topnav" id="myTopnav" style="width:100%">
+  <a href="index.html">Home</a>
+  <a href="setup.php">Setup</a>
+  <a href="loadscorer.html">Scorer</a>
+  <a href="readscores.html">Scoreboard</a>
+  <a href="/timer.html">Timer</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
