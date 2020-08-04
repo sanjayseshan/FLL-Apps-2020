@@ -647,7 +647,7 @@
                                     i = 1
                                     document.getElementById("pastDraws").innerHTML = ""
                                     while (i < window.localStorage.canvasImage.split("|").length) {
-                                        document.getElementById("pastDraws").innerHTML += "<text>" + saveText + " " + i + ":<br> <img style='max-width:300px;' src='" + window.localStorage.canvasImage.split("|")[i] + "' width='100%'></text><br>"
+                                        document.getElementById("pastDraws").innerHTML += "<text>" + saveNText + " " + i + ":<br> <img style='max-width:300px;' src='" + window.localStorage.canvasImage.split("|")[i] + "' width='100%'></text><br>"
                                         i++
                                     }
                                 }
@@ -1188,9 +1188,13 @@
     }
 </script>
 <script>
+    ct=0
     function initpage() {
         context = ctx;
-                        drawBoard()
+        if (ct==0){
+            drawBoard()
+            ct = 1
+        }
         // if (window.localStorage.DRRPGoogleSheet != undefined) {
         //     document.getElementById('sheetId').value = window.localStorage.DRRPGoogleSheet;
         //     } else {
@@ -1213,7 +1217,7 @@
         // document.getElementById("appstore").src = "assets/app-store/" + language + ".svg"
         // document.getElementById("googleplay").src = "assets/google-play/" + countrycode + "_get.svg"
 
-        // document.getElementById('title').innerHTML = title
+        document.getElementById('title').innerHTML = sketchTitle
         // document.getElementById('resetTxt').value = resetText
         // $('#resetTxt').button('refresh');
 

@@ -28,7 +28,8 @@ function languageInit() {
 	partly = "Partly"
 	completely = "Completely"
 	resetText = "Reset"
-	saveText = "Save"
+	saveText = "Save" // As verb
+	saveNText = "Save" // As noun
 	savescoreText = "Save Score"
 	loadsaveText = "Load Score No."
 	deletesaveText = "Delete All Saved Scores"

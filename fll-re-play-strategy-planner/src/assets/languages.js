@@ -6,7 +6,7 @@
 
 // Universal
 
-versionNum = "1.2"
+versionNum = "1.1"
 versionDay = 4
 versionMonth = 8
 versionYear = 2020
@@ -29,6 +29,7 @@ function languageInit() {
 	completely = "Completely"
 	resetText = "Reset"
 	saveText = "Save"
+	saveNText = "Save" // As noun
 	savescoreText = "Save Score"
 	loadsaveText = "Load Score No."
 	deletesaveText = "Delete All Saved Scores"
@@ -54,7 +55,7 @@ function languageInit() {
 	stopText = "Stop"
 	pointsText = "Points"
 
-	sketchTitle = "Strategy Planner"
+	sketchTitle = "FLL RePLAY Strategy Planner"
 	drawingsText = "Saved Drawings"
 	saveDrawingText = "Save Drawing"
 	deleteSavedDrawingsText = "Delete All Saved Drawings"
@@ -179,6 +180,8 @@ function languageInit() {
 		totalText = "Total Puntos"
 		savedText = "Guardado"
 		loadedText = "Cargado"
+		saveNText = "Guardado" // As noun
+
 
 		monthNames = ["", "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Augusto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 		improvementText = "Historia de Guardados"
@@ -189,7 +192,7 @@ function languageInit() {
 		stopText = "Parar"
 		pointsText = "Puntos"
 
-		sketchTitle = "Planificador de estrategia"
+		sketchTitle = "Planificador de estrategia FLL RePLAY"
 		drawingsText = "Dibujos guardados"
 		saveDrawingText = "Guardar dibujo"
 		deleteSavedDrawingsText = "Eliminar todos los dibujos"
@@ -332,7 +335,7 @@ function languageInit() {
 		stopText = "Παύση"
 		pointsText = "Βαθμοί"
 		
-		sketchTitle = "Σχεδιαστής Στρατηγικής"
+		sketchTitle = "FLL RePLAY Σχεδιαστής Στρατηγικής"
 		drawingsText = "Αποθηκευμένα Σχέδια"
 		saveDrawingText = "Αποθήκευση Σχεδίου"
 		deleteSavedDrawingsText = "Διαγραφή ΟΛΩΝ των αποθηκευμένων σχεδίων"
@@ -446,6 +449,8 @@ function languageInit() {
 	improvement = improvementText
 
 	window.monthNames = monthNames
+	title =  sketchTitle
+
 }
 
 languageInit()
