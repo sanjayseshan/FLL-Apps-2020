@@ -42,14 +42,14 @@ session_start();
   
  if (!isset($_SESSION["username"]) && !isset($_SESSION["Jusername"])) {
 	if (strpos(getcwd(), 'participants') !== false) {
-		echo "<a style='color:white' href='/participants/login.php'>Login</a>";
+		echo "<a style='color:white' href='/login.php'>Login</a>";
 	} else if (strpos(getcwd(), 'judges') !== false) {
-		echo "<a style='color:white' href='/tournament2020/login.php'>Login</a>";
+		echo "<a style='color:white' href='/login.php'>Login</a>";
 	} else {
-		echo "<a  style='color:white' href='/tournament2020/login.php'>Login</a>";
+		echo "<a  style='color:white' href='/login.php'>Login</a>";
 	}
  } else {
-	echo '; <a style="color:white" href="/tournament2020/logout.php"> Logout </a>';
+	echo '; <a style="color:white" href="/logout.php"> Logout </a>';
  }
  
  ?>
