@@ -1,3 +1,0 @@
-1,sample,user@example.com
-2,sample2,user@example.com
-3,sample3,user@example.com
