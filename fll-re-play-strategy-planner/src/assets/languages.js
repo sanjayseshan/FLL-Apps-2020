@@ -6,14 +6,14 @@
 
 // Universal
 
-versionNum = "1.1"
+versionNum = "1.2"
 versionDay = 4
 versionMonth = 8
 versionYear = 2020
 versionText = ""
 
 //langs=['en:United States:English','pt:Brazil:Portugues','de:Germany:Deutsche','es:Spain:Español','sk:Slovakia:Slovenský','nl:Netherlands:Nederlands','el:Greece:ελληνικά','hu:Hungary:Magyar','he:Israel:עִבְרִית‎','fr:France:français']
-langs = ['en:United States:English','es:Spain:Español','el:Greece:Ελληνικά']
+langs = ['en:United States:English','es:Spain:Español','el:Greece:Ελληνικά','pt:Brazil:Portugues']
 //  langs=['en:United States:English','es:Spain:Español','pt:Brazil:Portugues','de:Germany:Deutsche','el:Greece:ελληνικά','tr:Turkey:Türk','ro:Romania:Română','nl:Netherlands:Nederlands','hu:Hungary:Magyar','it:Italy:Italiano']
 
 monthNames = []
@@ -440,7 +440,147 @@ function languageInit() {
 		M15a = "Πόσες Μάρκες Ακριβείας υπάρχουν στο Field;"
 		
 		
-	} 
+	} else if (language == "pt") { 
+		translatorCredit = "Translated into Portuguese by Lucas Colonna and Anderson Harayashiki Moreira"
+
+		yes = "Sim"
+		no = "Não"
+		partly = "Parcialmente"
+		completely = "Completamente"
+		resetText = "Reiniciar"
+		saveText = "Salvar"
+		savescoreText = "Salvar Pontuação"
+		loadsaveText = "Carregar Pontuação:"
+		deletesaveText = "Apagar Pontuações Salvas"
+		importsaveText = "Importar Arquivo"
+		exportsaveText = "Exportar Arquivo"
+		signin = "Entrar como"
+		signout = "Sair"
+		GoogleCreate = "Criar Nova Planilha"
+		GoogleOpen = "Abrir Planilha do Google"
+		created = "Criado"
+		savedto = "Salvo em"
+		dateText = "Data/Horário"
+		totalText = "Pontuação Total"
+		savedText = "Salvo"
+		loadedText = "Carregado"
+		
+		monthNames = ["", "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+		improvementText = "Histórico de Pontuação"
+		scorerText = "Pontuador"
+		timersText = "Tempo"
+		savesText = "Salvar"
+		startText = "Iniciar"
+		stopText = "Parar"
+		pointsText = "Pontos"
+		
+		sketchTitle = "Planejador de Estratégia"
+		drawingsText = "Desenhos Salvos"
+		saveDrawingText = "Salvar Desenho"
+		deleteSavedDrawingsText = "Apagar Todos os Desenhos Salvos"
+		loadSavedDrawingText = "Carregar Desenho Salvo"
+		exportSavedDrawingsText = "Compartilhar Desenhos"
+		importSavedDrawingsText = " Importar Desenhos Compartilhados"
+		exportPNGText = "Exportar Desenho como .PNG"
+		
+		doneText = "Completo"
+		
+		timerText = "Temporizador:"
+		stopwatchText = "Cronômetro:"
+		
+		undefinedText = "Indefinido"
+		
+		revisionText = "Pontuador RePLAY versão "
+		copyrightText = "Copyright (c) " + versionYear + " Seshan Brothers"
+		tournamentText = " Uma versão desse pontuador com recursos para torneios pode ser encontrada em <a href='http://tournament.flltutorials.com/'>aqui</a>."
+		
+		title = "Pontuador FLL RePLAY"
+		
+		missionNumbering = "M" // i.e. display as M01, M02, etc. (first letter of the word "Mission" in your language)
+		
+		M00 = "Bônus de Inspeção de Equipamentos"
+		M00a = "Todos os seus equipamentos couberam no espaço de inspeção pequeno?"
+		
+		M01 = "Projeto de Inovação"
+		M01a = "Está, pelo menos com uma de suas partes, em contato com a logo RePLAY ou a área cinza ao redor do banco?"
+		M01b = "É formado por pelo menos duas peças LEGO brancas e mede, pelo menos, quatro pinos de um bloco LEGO em uma das direções."
+		
+		M02 = "Contador de Passos"
+		M02a = "O ponteiro inferior está em"
+		M02b = "Nenhum"
+		M02c = "Magenta"
+		M02d = "Amarelo"
+		M02e = "Azul"
+		
+		M03 = "Escorregador"
+		M03a = "Um boneco está fora do escorregador?"
+		M03b = "O segundo boneco está fora do escorregador?"
+		M03c = "Um boneco do escorregador está na área do robô?"
+		M03d = "Um dos bonecos está completamente fora do tapete, sobre o pneu pesado, sem estar tocando em mais nada?"
+		
+		M04 = "Banco"
+		M04a = "O banco está completamente abaixado?"
+		M04b = "O banco está completamente abaixado e há cubos tocando o tapete nos espaços da amarelinha?"
+		M04c = "O encosto está completamente removido dos seus buracos de encaixe?"
+		
+		M05 = "Basquetebol"
+		M05a = "Há um cubo dentro do caixote?"
+		M05b = "O caixote está apoiado sobre a trava branca no meio do poste?"
+		M05c = "O caixote está apoiado sobre a trava branca na parte de cima do poste?"
+		
+		M06 = "Barra Fixa"
+		M06a = " O robô passou completamente sob a estrutura da barra fixa a qualquer momento?"
+		M06b = " A barra fixa está segurando 100% do robô fora do tapete no final do round?"
+		
+		M07 = "Dança do Robô"
+		M07a = " O controlador do robô está, pelo menos parcialmente, sobre a pista de dança, movendo-se como se estivesse fazendo uma \"dança\" no final do round?"
+		M07b = " Qualquer ação repetitiva boba ou que demonstre habilidade conta como se fosse uma dança - façam algo divertido! Não é possível marcar pontos pela M07 e pelo robô \"pendurado\" da M06 no mesmo round."
+		
+		M08 = "Bocha"
+		M08a = "O modelo lançador de cada equipe enviou apenas um cubo para qualquer lugar da arena adversária e os cubos são da mesma cor um do outro?"
+		M08b = "Há cubos completamente dentro da sua quadra ou alvo?"
+		M08c = "Há pelo menos um cubo amarelo completamente dentro do seu alvo?"
+		
+		M09 = "Tombamento de Pneu"
+		M09a = "O pneu leve (banda azul) está com a parte central branca virada para cima?"
+		M09b = "O pneu pesado (banda preta) está com a parte central branca virada para cima?"
+		M09c = "Quantos pneus com a parte central branca virada para cima estão completamente dentro do círculo alvo grande?"
+		M09d = "Se o pneu pesado cruzar a linha vermelha a qualquer momento, mesmo que parcialmente, a pontuação será zero"
+		
+		M10 = "Telefone Celular"
+		M10a = "O lado branco do telefone celular está virado para cima, apoiado somente sobre o tapete?"
+		
+		M11 = "Esteira"
+		M11a = "O robô girou os roletes de modo que o ponteiro aponte para o"
+		M11b = "Nenhum"
+		M11c = "Cinza"
+		M11d = "Vermelho"
+		M11e = "Laranja"
+		M11f = "Amarelo"
+		M11g = "Verde claro"
+		M11h = "Verde escuro"
+		
+		M12 = "Máquina de Remo"
+		M12a = "A roda está completamente fora do círculo grande?"
+		M12b = "A roda está completamente dentro do círculo pequeno?"
+		
+		M13 = "Aparelho de ginástica"
+		M13a = "A trava está embaixo da alavanca e o ajuste da alavanca está no"
+		M13b = "Nenhum"
+		M13c = "Azul"
+		M13d = "Magenta"
+		M13e = "Amarelo"
+		
+		M14 = "Unidades de Saúde"
+		M14a = "Quantas unidades de saúde estão tocando a logo RePLAY ou a área cinza ao redor do banco?"
+		M14b = "Quantas unidades de saúde estão com a argola pendurada em uma das barras verticais da barra fixa, como ilustrado - quatro no máximo - e sem tocar em nenhum equipamento?"
+		
+		M15 = "Discos de Precisão"
+		M15a = "Quantos discos de precisão estão na arena?"
+		
+		
+
+	}
 
 
 	versionText = versionNum + " - " + versionDay + " " + monthNames[versionMonth] + " " + versionYear
