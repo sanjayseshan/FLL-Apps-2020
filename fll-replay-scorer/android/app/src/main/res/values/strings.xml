@@ -2,6 +2,6 @@
 <resources>
     <string name="app_name">FLL RePlay Scorer</string>
     <string name="title_activity_main">FLL RePlay Scorer</string>
-    <string name="package_name">com.ev3lessons.FLLRePlayScorer</string>
-    <string name="custom_url_scheme">com.ev3lessons.FLLRePlayScorer</string>
+    <string name="package_name" translatable="false">com.ev3lessons.FLLRePlayScorer</string>
+    <string name="custom_url_scheme" translatable="false">com.ev3lessons.FLLRePlayScorer</string>
 </resources>
