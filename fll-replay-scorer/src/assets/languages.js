@@ -6,7 +6,7 @@
 
 // Universal
 
-versionNum = "1.4"
+versionNum = "1.5"
 versionDay = 5
 versionMonth = 8
 versionYear = 2020
@@ -114,7 +114,7 @@ function languageInit() {
 	M06b = "Does the pull-up bar hold 100% of the robot up off the mat at the end of the match?"
 
 	M07 = "Robot Dance"
-	M07a = "Is the robot’s controller is at least partly over the dance floor in a “dancing” motion at the end of the match?"
+	M07a = "Is the robot’s controller at least partly over the dance floor in a “dancing” motion at the end of the match?"
 	M07b = "Any silly or skilled repetitive action counts as dancing – do something fun! For M07, you cannot score this plus the “held up” score from M06 in the same match."
 
 	M08 = "Boccia"
