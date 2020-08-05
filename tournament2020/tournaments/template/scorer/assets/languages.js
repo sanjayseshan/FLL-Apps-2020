@@ -6,8 +6,8 @@
 
 // Universal
 
-versionNum = "1.3"
-versionDay = 4
+versionNum = "1.4"
+versionDay = 5
 versionMonth = 8
 versionYear = 2020
 versionText = ""
@@ -215,7 +215,7 @@ function languageInit() {
 		missionNumbering = "M" // i.e. display as M01, M02, etc. (first letter of the word "Mission" in your language)
 
 		M00 = "Bonificación por Inspección del Equipamiento"
-		M00a = "¿Cabe todo vuestro equipamiento en la zona de inspección meno?"
+		M00a = "¿Cabe todo vuestro equipamiento en la zona de inspección menor?"
 
 		M01 = "Proyecto de Innovación"
 		M01a = "¿Hay alguna parte del modelo que toca el logo RePLAY o el área gris alrededor del banco?"
@@ -254,8 +254,8 @@ function languageInit() {
 
 		M08 = "Boccia"
 		M08a = "¿Han ambos compartidores de bochas enviado solo un cubo a cualquier parte del terreno opuesto y ambos cubos son del mismo color?"
-		M08b = "¿Cuántas cubos están completamente en su campo o diana?" 
-		M08c = "¿Hay por lo menos un cubo armarillo completamente dentro de su diana?"
+		M08b = "¿Cuántas cubos están completamente en vuestro campo o diana?" 
+		M08c = "¿Hay por lo menos un cubo armarillo completamente dentro de vuestro diana?"
 
 		M09 = "Voltear Neumáticos"
 		M09a = "¿Está el neumático ligero (con banda de rodadura azul) con el centro blanco arriba?"
@@ -264,7 +264,7 @@ function languageInit() {
 		M09d = "Si el neumático pesado cruza la linia roja de voleteando, se marca cero."
 
 		M10 = "Teléfono Móvil"
-		M10a = "¿Está el teléfono móvil con su cara blanca boca arriba y descansa solo sobre el tapete?"
+		M10a = "¿Está el teléfono móvil con vuestro cara blanca boca arriba y descansa solo sobre el tapete?"
 
 		M11 = "Cinta de Correr"
 		M11a = "El robot ha girado los rodillos así que el puntero indica"  
