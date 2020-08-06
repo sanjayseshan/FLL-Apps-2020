@@ -6,14 +6,14 @@
 
 // Universal
 
-versionNum = "1.5"
-versionDay = 5
+versionNum = "1.6"
+versionDay = 6
 versionMonth = 8
 versionYear = 2020
 versionText = ""
 
 //langs=['en:United States:English','pt:Brazil:Portugues','de:Germany:Deutsche','es:Spain:Español','sk:Slovakia:Slovenský','nl:Netherlands:Nederlands','el:Greece:ελληνικά','hu:Hungary:Magyar','he:Israel:עִבְרִית‎','fr:France:français']
-langs = ['en:United States:English','es:Spain:Español','el:Greece:Ελληνικά','pt:Brazil:Portugues']
+langs = ['en:United States:English','es:Spain:Español','el:Greece:Ελληνικά','pt:Brazil:Portugues','nl:Netherlands:Nederlands']
 //  langs=['en:United States:English','es:Spain:Español','pt:Brazil:Portugues','de:Germany:Deutsche','el:Greece:ελληνικά','tr:Turkey:Türk','ro:Romania:Română','nl:Netherlands:Nederlands','hu:Hungary:Magyar','it:Italy:Italiano']
 
 monthNames = []
@@ -577,6 +577,141 @@ function languageInit() {
 		M15a = "Quantos discos de precisão estão na arena?"
 		
 		
+
+	} else if (language == "nl") {
+		translatorCredit = "Translated into Dutch by Irene Hulsen"
+
+		yes = "Ja"
+		no = "Nee"
+		partly = "Gedeeltelijk"
+		completely = "Volledig"
+		resetText = "Reset"
+		saveText = "Opslaan" // As verb
+		saveNText = "Opslaan" // As noun
+		savescoreText = "Score opslaan"
+		loadsaveText = "Laad scorenr."
+		deletesaveText = "Verwijder alle opgeslagen scores"
+		importsaveText = "Importeer gedeelde scores"
+		exportsaveText = "Deel scores"
+		created = "Gemaakt"
+		savedto = "Opgeslagen naar"
+		dateText = "Datum/Tijd"
+		totalText = "Totaal aantal punten"
+		savedText = "Opgeslagen"
+		loadedText = "Geladen"
+		
+		monthNames = ["", "januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"];
+		improvementText = "Score geschiedenis"
+		scorerText = "Scorer"
+		timersText = "Timers"
+		savesText = "Opgeslagen"
+		startText = "Start"
+		stopText = "Stop"
+		pointsText = "Punten"
+		
+		sketchTitle = "FLL RePLAY strategieplanner"
+		drawingsText = "Opgeslagen tekeningen"
+		saveDrawingText = "Tekening opslaan"
+		deleteSavedDrawingsText = "Verwijder alle opgeslagen tekeningen"
+		loadSavedDrawingText = "Laad opgeslagen tekening"
+		exportSavedDrawingsText = "Deel tekeningen"
+		importSavedDrawingsText = "Importeer gedeelde tekeningen"
+		exportPNGText = "Exporteer tekening als PNG"
+		
+		doneText = "Voltooid"
+		
+		timerText = "Timer:"
+		stopwatchText = "Stopwatch:"
+		
+		undefinedText = "niet gedefinieerd"
+		
+		revisionText = "RePLAY scorer versie "
+		copyrightText = "Copyright (c) " + versionYear + " Seshan Brothers"
+		tournamentText = "Een versie van deze scorer met extra functies die nodig zijn voor een toernooi is te vinden op <a href='http://tournament.flltutorials.com/'></a>."
+		
+		title = "FLL RePLAY scorer"
+		
+		missionNumbering = "M" // i.e. display as M01, M02, etc. (first letter of the word "Mission" in your language)
+		
+		M00 = "Bonus"
+		M00a = "Past alle uitrusting van het team in de kleine inspectieruimte?"
+		
+		M01 = "Innovatieproject"
+		M01a = "Raakt een deel van het model het RePLAY logo aan of het grijze gebied rond de bank?"
+		M01b = "Het model moet gemaakt zijn van tenminste twee witte LEGO onderdelen en minimaal vier LEGO noppen meten in minstens één richting."
+		
+		M02 = "Stappenteller"
+		M02a = "De onderkant van de aanwijzer staat op"
+		M02b = "Geen"
+		M02c = "Magenta"
+		M02d = "Geel"
+		M02e = "Blauw"
+		
+		M03 = "Glijbaan"
+		M03a = "Is het eerste glijbaanfiguur van de glijbaan af?"
+		M03b = "Is het tweede glijbaanfiguur van de glijbaan af?"
+		M03c = "Is een glijbaanfiguur volledig in THUIS?"
+		M03d = "Wordt een glijbaanfiguur volledig van de mat gehouden door de zware band en raakt het niets anders?"
+		
+		M04 = "Bank"
+		M04a = "Ligt de bank plat?"
+		M04b = "Hoeveel blokjes raken de mat in de hinkelbaanruimtes?"
+		M04c = "Is de rugleuning volledig uit beide gaten?"
+		
+		M05 = "Basketbal"
+		M05a = "Is er een blokje in de krat?"
+		M05b = "Steunt de krat op de middelste witte stop?"
+		M05c = "Steunt de krat op de bovenste witte stop?"
+		
+		M06 = "Optrekstang"
+		M06a = "Is de robot op een bepaald moment volledig voorbij het rechtopstaande frame van de opstrekstang gegaan?"
+		M06b = "Houdt de opstrekstang 100% van de robot van de mat aan het einde van de wedstrijd?"
+		
+		M07 = "Robotdans"
+		M07a = "Staat de controller van de robot aan het einde van de wedstrijd tenminste gedeeltelijk over de dansvloer in een “dansende” beweging?"
+		M07b = "Elke gekke of gedurfde herhalende actie telt als dansen – doe iets leuks! Je kunt in dezelfde wedstrijd niet scoren voor M07 en het “omhoog houden” van M06."
+		
+		M08 = "Boccia"
+		M08a = "Hebben beide deelmodellen slechts één blokje ergens op het tegenoverliggende veld neergelegd en hebben die blokjes dezelfde kleur?"
+		M08b = "Hoeveel blokjes zijn volledig in jullie frame of doel?"
+		M08c = "Is er tenminste 1 geel blokje volledig in jullie doel?"
+		
+		M09 = "Banden omdraaien"
+		M09a = "Is de lichte (blauwe) band omgedraaid, wit naar boven?"
+		M09b = "Is de zware (zwarte) band omgedraaid, wit naar boven?"
+		M09c = "Hoeveel omgedraaide banden, wit naar boven, zijn volledig in de grote doelcirkel?"
+		M09d = "Als de zware band op enig moment de rode markeringslijn passeert, zelfs gedeeltelijk, dan scoort hij nul punten."
+		
+		M10 = "Mobieltje"
+		M10a = "Is het mobieltje omgedraaid met de witte kant naar boven en rust het alleen op de mat?"
+		
+		M11 = "Loopband"
+		M11a = "De robot heeft de rollen gedraaid, zodat de wijzer wijst naar"
+		M11b = "Geen"
+		M11c = "Grijs"
+		M11d = "Rood"
+		M11e = "Oranje"
+		M11f = "Geel"
+		M11g = "Lichtgroen"
+		M11h = "Donkergroen"
+		
+		M12 = "Roeimachine"
+		M12a = "Is het losse wiel volledig buiten de grote cirkel?"
+		M12b = "Is het losse wiel volledig in de kleine cirkel?"
+		
+		M13 = "Gewichtsapparaat"
+		M13a = "De stop is onder de hendel en de hendel is ingesteld op"
+		M13b = "Geen"
+		M13c = "Blauw"
+		M13d = "Magenta"
+		M13e = "Geel"
+		
+		M14 = "Gezondsheidsunits"
+		M14a = "Hoeveel gezondheidsunits raken het RePLAY logo aan of het grijze gebied rond de bank?"
+		M14b = "Hoeveel gezondsheidsunits zijn gelust aan een paal van de opstrekstang, zoals afgebeeld – maximaal vier – en raken geen uitrusting aan?"
+		
+		M15 = "Precisie"
+		M15a = "Hoeveel precisietekens zijn er op de het veld overgebleven?"		
 
 	}
 
