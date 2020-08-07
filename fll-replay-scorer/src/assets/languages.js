@@ -6,8 +6,8 @@
 
 // Universal
 
-versionNum = "1.6"
-versionDay = 6
+versionNum = "1.7"
+versionDay = 7
 versionMonth = 8
 versionYear = 2020
 versionText = ""
@@ -710,8 +710,8 @@ function languageInit() {
 		M14a = "Hoeveel gezondheidsunits raken het RePLAY logo aan of het grijze gebied rond de bank?"
 		M14b = "Hoeveel gezondsheidsunits zijn gelust aan een paal van de opstrekstang, zoals afgebeeld – maximaal vier – en raken geen uitrusting aan?"
 		
-		M15 = "Precisie"
-		M15a = "Hoeveel precisietekens zijn er op de het veld overgebleven?"		
+	    M15 = "Precisie"
+	    M15a = "Hoeveel precisietekens zijn er op het veld overgebleven?"
 
 	}
 
