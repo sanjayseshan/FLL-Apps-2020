@@ -326,7 +326,7 @@
 
             <div style="padding-left: 10px; " id="tabs-2">
                 <p>
-                    <!--	  Timer System 1.5.0 -->
+                    <!--      Timer System 1.5.0 -->
                     <div class="ui-mini" id="Timer">
                         <text id="timerText"> Timer: </text>
                         <table id="timerChild" class="timer" style="border-collapse: collapse;">
@@ -390,7 +390,7 @@
 
                     <br><br>
 
-                    <!--	      Google Saving System v1.0 -->
+                    <!--          Google Saving System v1.0 -->
 
                     <!-- Legacy Local Saver -->
                     <div id="legacy" style="max-width:500px">
@@ -454,7 +454,7 @@
                             <input id="saveid" type="text" data-inline="true" data-role="spinbox" onchange="if (this.value > maximum) {this.value = maximum} " min="1" value="0">
 
                             <!--       </div>
-			     </div>-->
+                 </div>-->
 
                         </div>
                         <button id="deleteText" class="ui-button ui-widget ui-corner-all" type="button" onclick="window.localStorage.DRRPSscorer = ''; window.localStorage.DRRPS1scorer = ''; displaysaves(); drawBasic(); alert(doneText)">Delete
@@ -465,14 +465,14 @@
                             <div id="saves"></div>
 
                             <button id="importText" class="ui-mini no-mobile" onclick=" document.getElementById('fileInput').click() ;
-									 maximum = window.localStorage.DRRPSscorer.split('/').length-1;">Import Save</button>
+                                     maximum = window.localStorage.DRRPSscorer.split('/').length-1;">Import Save</button>
 
                             <input onchange="setTimeout(function(){
-			       displaysaves();
-			       drawBasic();
-			       document.getElementById('saveid').max = window.localStorage.DRRPSscorer.split('/').length-1;},300)" style=" position: fixed;
-			    bottom: -10000px;
-			    left: -100000px;" type="file" accept=".DRRP" id="fileInput">
+                   displaysaves();
+                   drawBasic();
+                   document.getElementById('saveid').max = window.localStorage.DRRPSscorer.split('/').length-1;},300)" style=" position: fixed;
+                bottom: -10000px;
+                left: -100000px;" type="file" accept=".DRRP" id="fileInput">
 
 
                             <button class="ui-mini no-mobile" id="exportText" onclick="download(window.localStorage.DRRPSscorer + ';' + window.localStorage.DRRPS1scorer, day+'myscores.DRRP','application/octet-stream')">Export
@@ -1366,7 +1366,7 @@
         }\
 </style>"
                     // Apply dark theme or set theme css variables to dark
-                    /*	  i = 0
+                    /*      i = 0
                           while (i<document.getElementsByClassName("timer").length) {
                               document.getElementsByClassName("timer")[i].style.border = "10px solid #121212"
                               i=i+1
@@ -1398,7 +1398,7 @@
                               document.getElementsByClassName("ui-radio-on")[i].style.color = "white"
                               document.getElementsByClassName("ui-radio-on")[i].style.textShadow = "none"
                               i=i+1
-                          }  
+                          }
 
                           document.getElementById("timerChild").style.border = "10px solid white !important"
                           document.getElementById("stopwatchChild").style.border = "10px solid white !important"
@@ -1421,6 +1421,8 @@
     }
 </script>
 <script>
+    loaded = 0
+
     function initpage() {
 
 
@@ -1429,7 +1431,7 @@
         // if (window.localStorage.DRRPGoogleSheet != undefined) {
         //     document.getElementById('sheetId').value = window.localStorage.DRRPGoogleSheet;
         //     } else {
-        // 	document.getElementById('sheetId').value = undefinedText;
+        //     document.getElementById('sheetId').value = undefinedText;
         //     }
 
 
@@ -1521,7 +1523,7 @@
 
         document.getElementById('versionText').innerHTML = versionText
 
-        //	document.getElementById('tournamentText').innerHTML = tournamentText
+        //    document.getElementById('tournamentText').innerHTML = tournamentText
 
         if (translatorCredit != "") {
             document.getElementById('translatorCredit').innerHTML = translatorCredit
@@ -1549,8 +1551,10 @@
         document.getElementById('loadingGif').style.display = 'none'
 
         checkDarkTheme()
-        loadsave(blanksave)
-
+        if (loaded == 0) {
+            loaded = 1
+            loadsave(blanksave)
+        }
 
     }
 
