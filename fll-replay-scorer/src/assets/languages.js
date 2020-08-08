@@ -6,14 +6,14 @@
 
 // Universal
 
-versionNum = "1.7"
-versionDay = 7
+versionNum = "1.8"
+versionDay = 8
 versionMonth = 8
 versionYear = 2020
 versionText = ""
 
 //langs=['en:United States:English','pt:Brazil:Portugues','de:Germany:Deutsche','es:Spain:Español','sk:Slovakia:Slovenský','nl:Netherlands:Nederlands','el:Greece:ελληνικά','hu:Hungary:Magyar','he:Israel:עִבְרִית‎','fr:France:français']
-langs = ['en:United States:English','es:Spain:Español','el:Greece:Ελληνικά','pt:Brazil:Portugues','nl:Netherlands:Nederlands']
+langs = ['en:United States:English','es:Spain:Español','el:Greece:Ελληνικά','pt:Brazil:Portugues','nl:Netherlands:Nederlands','th:Thailand:ไทย']
 //  langs=['en:United States:English','es:Spain:Español','pt:Brazil:Portugues','de:Germany:Deutsche','el:Greece:ελληνικά','tr:Turkey:Türk','ro:Romania:Română','nl:Netherlands:Nederlands','hu:Hungary:Magyar','it:Italy:Italiano']
 
 monthNames = []
@@ -712,6 +712,142 @@ function languageInit() {
 		
 	    M15 = "Precisie"
 	    M15a = "Hoeveel precisietekens zijn er op het veld overgebleven?"
+
+	} else if (language == "th") {
+		translatorCredit = "Translated into Thai by Wil Losereewanich (วรมันต์ ลอเสรีวานิช)"
+
+		yes = "ใช่"
+		no = "ไม่ใช่"
+		partly = "บางส่วน"
+		completely = "ทั้งหมด"
+		resetText = "Reset"
+		saveText = "บันทึก" // As verb
+		saveNText = "การบันทึก" // As noun
+		savescoreText = "บันทึกคะแนน"
+		loadsaveText = "โหลดคะแนนครั้งที่"
+		deletesaveText = "ลบการบันทึกของทุกคะแนน"
+		importsaveText = "นำเข้าคะแนนที่ได้แชร์"
+		exportsaveText = "แชร์คะแนน"
+		created = "สร้าง"
+		savedto = "บันทึกไปยัง"
+		dateText = "วันและเวลา"
+		totalText = "คะแนนรวม"
+		savedText = "บันทึกแล้ว"
+		loadedText = "โหลดแล้ว"
+
+		monthNames = ["", "มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"];
+		improvementText = "ประวัติคะแนน"
+		scorerText = "บันทึกคะแนน"
+		timersText = "จับเวลา"
+		savesText = "การบันทึก"
+		startText = "Start"
+		stopText = "Stop"
+		pointsText = "คะแนน"
+
+		sketchTitle = "FLL RePLAY Strategy Planner"
+		drawingsText = "ภาพวัดที่ได้บันทึกไว้"
+		saveDrawingText = "บันทึกภาพวาด"
+		deleteSavedDrawingsText = "ลบภาพวาดที่ได้บันทึกไว้ทั้งหมด"
+		loadSavedDrawingText = "โหลดภาพวาดที่ได้บันทึกไว้"
+		exportSavedDrawingsText = "แบ่งปันภาพวาด"
+		importSavedDrawingsText = "นำเข้าภาพวาดที่ได้แชร์"
+		exportPNGText = "ส่งภาพวาดเป็นรูป PNG"
+
+		doneText = "เสร็จสิ้น"
+
+		timerText = "Timer:"
+		stopwatchText = "Stopwatch:"
+
+		undefinedText = "undefined"
+
+		revisionText = "RePLAY Scorer เวอร์ชัน "
+		copyrightText = "Copyright (c) " + versionYear + " Seshan Brothers"
+		tournamentText = "เครื่องมือคำนวณคะแนนเวอร์ชันสำหรับการแข่งขันสามารถพบได้ที่  <a href='http://tournament.flltutorials.com/'>เว็บไซต์</a>."
+
+		title = "FLL RePLAY Scorer"
+
+		missionNumbering = "M" // i.e. display as M01, M02, etc. (first letter of the word "Mission" in your language)
+
+		M00 = "ผลประโยชน์"
+		M00a = "อุปกรณ์ของทีมทั้งหมดอยู่ภายใน Small Inspection Area"
+
+		M01 = "โครงงานนวัตกรรม"
+		M01a = "ชิ้นส่วนบางส่วนของโมเดลสัมผัสโลโก้ RePLAY หรือพื้นที่สีเทาบริเวณม้านั่ง"
+		M01b = "โมเดลจะต้องสร้างจากชิ้นส่วน LEGO สีขาวอย่างน้อยสองชิ้น และมีความยาวอย่างน้อย 4 ปุ่ม LEGO ในอย่างน้อยหนึ่งทิศทาง"
+
+		M02 = "เครื่องนับก้าว"
+		M02a = "หัวของตัวชี้อยู่ที่"
+		M02b = "—"
+		M02c = "สีบานเย็น"
+		M02d = "สีเหลือง"
+		M02e = "สีฟ้า"
+
+		M03 = "สไลด์"
+		M03a = "หุ่นมนุษย์ตัวแรกอยู่ภายนอกสไลด์"
+		M03b = "หุ่นมนุษย์ตัวที่สองอยู่ภายนอกสไลด์"
+		M03c = "หุ่นมนุษย์หนึ่งตัวอยู่ในพื้นที่ Home อย่างสมบูรณ์"
+		M03d = "หุ่นมนุษย์หนึ่งตัวอยู่บนล้อหนักโดยสิ้นเชิง ไม่สัมผัสสนามหรือสิ่งอื่นใด"
+
+		M04 = "ม้านั่ง"
+		M04a = "ม้านั่งถูกพับลงให้เรียบ"
+		M04b = "จำนวนลูกบาศก์ที่สัมผัสสนามภายในพื้นที่ตั้งเต"
+		M04c = "พนักพิงไม่อยู่บนรูทั้งสองโดยสิ้นเชิง"
+
+		M05 = "บาสเกตบอล"
+		M05a = "มีลูกบาศก์หนึ่งลูกในห่วง"
+		M05b = "ห่วงรองรับอยู่บนตัวหยุดสีขาวระดับปานกลาง"
+		M05c = "ห่วงรองรับอยู่บนตัวหยุดสีขาวระดับสูง"
+
+		M06 = "บาร์โหน"
+		M06a = "หุ่นยนต์ได้เคลื่อนที่ผ่านใต้กรอบแนวตั้งของบาร์โหนอย่างสิ้นเชิง"
+		M06b = "บาร์โหนยก 100% ของหุ่นยนต์ขึ้นเหนือสนาม ณ ตอนจบของรอบการแข่งขัน"
+
+		M07 = "หุ่นยนต์เต้น"
+		M07a = "ตัวควบคุมของหุ่นยนต์อยู่เหนือเวทีเต้นอย่างน้อยบางส่วน และเคลื่อนที่ “เต้น” ณ ตอนจบของรอบการแข่งขัน"
+		M07b = "การเต้นคือการเคลื่อนไหวซ้ำๆ ไม่ว่าจะตลกหรือมีลีลา ดังนั้นคุณสามารถทำให้มันสนุกได้! สำหรับ M07 ในหนึ่งรอบการแข่งขัน คุณไม่สามารถทำคะแนนส่วนนี้พร้อมกับคะแนนจากภารกิจ M06 ได้"
+
+		M08 = "บอคเซีย"
+		M08a = "โมเดลแชร์ทั้งสองส่งลูกบาศก์แค่หนึ่งลูกต่อโมเดลไปยังสนามของอีกฝ่าย และลูกบาศก์ทั้งสองมีสีตรงกัน"
+		M08b = "จำนวนลูกบาศก์ที่อยู่ภายในกรอบหรือเป้าหมาย โดยสิ้นเชิง"
+		M08c = "มีลูกบาศก์สีเหลืองอย่างน้อยหนึ่งลูกภายในเป้าหมาย โดยสิ้นเชิง"
+
+		M09 = "พลิกล้อ"
+		M09a = "ล้อเบา (ยางสีฟ้า) มีด้านสีขาวอยู่ข้างบน"
+		M09b = "ล้อหนัก (ยางสีดำ) มีด้านสีขาวอยู่ข้างบน"
+		M09c = "จำนวนล้อที่มีด้านสีขาวอยู่ข้างบนที่อยู่ในพื้นที่เป้าหมายใหญ่ โดยสิ้นเชิง"
+		M09d = "หากล้อหนักข้ามเส้นพลิกสีแดง เมื่อไหร่ก็ตาม แม้แค่บางส่วน คะแนนจะกลายเป็นศูนย์"
+
+		M10 = "โทรศัพท์"
+		M10a = "หน้าสีขาวของโทรศัพท์อยู่ข้างบน และโทรศัพท์รองรับโดยสนามโดยสิ้นเชิง"
+
+		M11 = "ลู่วิ่ง"
+		M11a = "หุ่นยนต์ได้หมุนลูกกลิ้งทำให้ตัวชี้ชี้ไปที่"
+		M11b = "—"
+		M11c = "สีเทา"
+		M11d = "สีแดง"
+		M11e = "สีส้ม"
+		M11f = "สีเหลือง"
+		M11g = "สีเขียวอ่อน"
+		M11h = "สีเขียวเข้ม"
+
+		M12 = "เครื่องกรรเชียงบก"
+		M12a = "ล้ออิสระอยู่ภายนอกวงกลมใหญ่โดยสิ้นเชิง"
+		M12b = "ล้ออิสระอยู่ภายในวงกลมเล็กโดยสิ้นเชิง"
+
+		M13 = "เครื่องเล่นเวท"
+		M13a = "ตัวหยุดอยู่ใต้คันโยก ซึ่งอยู่ที่"
+		M13b = "—"
+		M13c = "สีฟ้า"
+		M13d = "สีบานเย็น"
+		M13e = "สีเหลือง"
+
+		M14 = "หน่วยสุขภาพ"
+		M14a = "จำนวนหน่วยสุขภาพที่สัมผัสโลโก้ RePLAY หรือพื้นที่สีเทาบริเวณม้านั่ง"
+		M14b = "จำนวนหน่วยสุขภาพที่เกี่ยวบนเสาของบาร์โหนตามกติกา (มากสุด 4 หน่วย) และไม่สัมผัสอุปกรณ์ใด"
+
+		M15 = "ความแม่นยำ"
+		M15a = "จำนวนเหรียญความแม่นยำที่เหลือบนสนาม"
+
 
 	}
 
