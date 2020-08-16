@@ -6,14 +6,14 @@
 
 // Universal
 
-versionNum = "1.8"
-versionDay = 8
+versionNum = "1.9"
+versionDay = 16
 versionMonth = 8
 versionYear = 2020
 versionText = ""
 
 //langs=['en:United States:English','pt:Brazil:Portugues','de:Germany:Deutsche','es:Spain:Español','sk:Slovakia:Slovenský','nl:Netherlands:Nederlands','el:Greece:ελληνικά','hu:Hungary:Magyar','he:Israel:עִבְרִית‎','fr:France:français']
-langs = ['en:United States:English','es:Spain:Español','el:Greece:Ελληνικά','pt:Brazil:Portugues','nl:Netherlands:Nederlands','th:Thailand:ไทย']
+langs = ['en:United States:English','es:Spain:Español','el:Greece:Ελληνικά','pt:Brazil:Portugues','nl:Netherlands:Nederlands','th:Thailand:ไทย','ro:Romania:Română']
 //  langs=['en:United States:English','es:Spain:Español','pt:Brazil:Portugues','de:Germany:Deutsche','el:Greece:ελληνικά','tr:Turkey:Türk','ro:Romania:Română','nl:Netherlands:Nederlands','hu:Hungary:Magyar','it:Italy:Italiano']
 
 monthNames = []
@@ -849,6 +849,140 @@ function languageInit() {
 		M15a = "จำนวนเหรียญความแม่นยำที่เหลือบนสนาม"
 
 
+	} else if (language == "ro") {
+		translatorCredit = "Traducerea și adaptarea în limba română realizată de Ștefan RĂDULESCU @ Asociația pentru educație STEM creativă (CRESTEM)."
+
+		yes = "Da"
+		no = "Nu"
+		partly = "Parțial"
+		completely = "Complet"
+		resetText = "Resetați"
+		saveText = "Salvați" // As verb
+		saveNText = "Salvare" // As noun
+		savescoreText = "Salvați punctajul"
+		loadsaveText = "Încărcați punctajul nr."
+		deletesaveText = "Ștergeți punctajele salvate"
+		importsaveText = "Importați punctajele salvate local"
+		exportsaveText = "Exportați punctajele local"
+		created = "Creat"
+		savedto = "Salvat în"
+		dateText = "Data/Ora"
+		totalText = "Total puncte"
+		savedText = "Salvat"
+		loadedText = "Încărcat"
+		
+		monthNames = ["", "ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"];
+		improvementText = "Istoric punctaj"
+		scorerText = "Calculator de scor"
+		timersText = "Cronometre"
+		savesText = "Salvări"
+		startText = "Start"
+		stopText = "Stop"
+		pointsText = "Puncte"
+		
+		sketchTitle = "Planificarea strategiei FLL RePLAY"
+		drawingsText = "Schițe salvate"
+		saveDrawingText = "Salvați schița"
+		deleteSavedDrawingsText = "Ștergeți toate schițele salvate"
+		loadSavedDrawingText = "Încărcați schiță salvată"
+		exportSavedDrawingsText = "Exportați schița local"
+		importSavedDrawingsText = "Importați o schiță salvată local"
+		exportPNGText = "Exportați schița în format PNG"
+		
+		doneText = "Completat"
+		
+		timerText = "Temporizator:"
+		stopwatchText = "Cronometru:"
+		
+		undefinedText = "nedefinit"
+		
+		revisionText = "Calculator de scor RePLAY. Versiunea "
+		copyrightText = "Copyright (c) " + versionYear + " Seshan Brothers"
+		tournamentText = "O versiunea a calculatorului de scor cu funcționalități necesare în cadrul unui turneu este disponibil <a href='http://tournament.flltutorials.com/'>aici</a>."
+		
+		title = "Calculator de scor FLL RePLAY"
+		
+		missionNumbering = "M" // i.e. display as M01, M02, etc. (first letter of the word "Mission" in your language)
+		
+		M00 = "Bonus inspecție echipament"
+		M00a = "Echipamentul echipei, inclusiv robotul, încape în zona mică de inspecție?"
+		
+		M01 = "Proiectul de inovare"
+		M01a = "Orice parte a modelului atinge sigla RePLAY sau zona gri din jurul băncii?"
+		M01b = "Modelul trebuie să fie alcătuit din cel puțin două piese LEGO și să măsoare cel puțin patru crampoane (studs) pe o latură."
+		
+		M02 = "Contorul de pași"
+		M02a = "Acul indicator al brațului este pe"
+		M02b = "nici o culoare"
+		M02c = "roz"
+		M02d = "galben"
+		M02e = "albastru"
+		
+		M03 = "Toboganul"
+		M03a = "Prima figurină este coborâtă de pe tobogan?"
+		M03b = "A doua figurină este coborâtă de pe tobogan?"
+		M03c = "Este figurina complet în bază?"
+		M03d = "Este o figurină susținută complet de anvelopa grea, fără să atingă planșa sau orice altceva?"
+		
+		M04 = "Banca"
+		M04a = "Banca este aplatizată?"
+		M04b = "Câte cuburi sunt în contact cu planșa în zonele pentru șotron?"
+		M04c = "Spătarul băncii a fost înlăturat complet din ambele părți ale băncii?"
+		
+		M05 = "Coșul de baschet"
+		M05a = "Există un cub în coș?"
+		M05b = "Coșul de baschet a fost ridicat și așezat pe piedica albă de la mijloc?"
+		M05c = "Coșul de baschet a fost ridicat și așezat pe piedica albă din vârf?"
+		
+		M06 = "Bara de tracțiuni"
+		M06a = "Robotul a trecut complet pe sub cadrul barei de tracțiuni, oricând în timpul meciului?"
+		M06b = "Bara de tracțiuni susține 100% din greutatea robotului fără ca acesta să atingă planșa, la sfârșitul meciului?"
+		
+		M07 = "Dansul robotului"
+		M07a = "O porțiune a cărămizii inteligente a robotului este cel puțin parțial deasupra ringului de dans, iar robotul “dansează” când se termină meciul?"
+		M07b = "Orice mișcare repetitivă, amuzantă sau maiestuoasă, a robotului se consideră ca fiind dans - faceți ceva distractiv! Pentru M07, nu puteți obține punctajul de la această misiune împreună cu punctajul pentru “susținere” de la misiunea M06 în cadrul aceluiași meci."
+		
+		M08 = "Jocul Boccia"
+		M08a = "Ambele lansatoare (modelele comune) au trimis un singur cub oriunde pe masa opusă și cuburile sunt de aceeași culoare?"
+		M08b = "Câte cuburi sunt complet în interiorul ramei sau țintei voastre?"
+		M08c = "Există cel puțin un cub de culoare galbenă complet în interiorul țintei?"
+		
+		M09 = "Răsturnarea anvelopelor"
+		M09a = "Anvelopa ușoară (albastră) este întoarsă cu centrul alb în sus?"
+		M09b = "Anvelopa grea (neagră) este întoarsă cu centrul alb în sus?"
+		M09c = "Câte anvelope au centrul alb în sus și sunt complet în cercul mare?"
+		M09d = "Dacă anvelopa grea trece, chiar și parțial, peste linia roșie, oricând în timpul meciului, scorul va fi zero."
+		
+		M10 = "Telefonul"
+		M10a = "Telefonul este cu partea albă în sus și așezat direct pe planșă?"
+		
+		M11 = "Banda de alergare"
+		M11a = "Robotul a mișcat rolele, iar acul indicator arată"
+		M11b = "nici o culoare"
+		M11c = "gri"
+		M11d = "roșu"
+		M11e = "portocaliu"
+		M11f = "galben"
+		M11g = "verde deschis"
+		M11h = "verde închis"
+		
+		M12 = "Aparatul de vâslit"
+		M12a = "Roata liberă este în afara cercului mare?"
+		M12b = "Roata liberă este în interiorul cercului mic?"
+		
+		M13 = "Aparatul de forță"
+		M13a = "Piedica este pusă și gradul de dificultate este"
+		M13b = "nici o culoare"
+		M13c = "albastru"
+		M13d = "roz"
+		M13e = "galben"
+		
+		M14 = "Unitățile de sănătate"
+		M14a = "Câte unități de sănătate ating sigla RePLAY sau zona gri de lângă bancă?"
+		M14b = "Câte unități de sănătate sunt poziționate pe bara de tracțiuni – maximum patru – și fără să atingă vreun echipament?"
+		
+		M15 = "Precizia"
+		M15a = "Câte jetoane de precizie au rămas pe masă la sfârșitul meciului?"			
 	}
 
 
