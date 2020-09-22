@@ -6,14 +6,14 @@
 
 // Universal
 
-versionNum = "1.9"
-versionDay = 16
-versionMonth = 8
+versionNum = "2.0"
+versionDay = 21
+versionMonth = 9
 versionYear = 2020
 versionText = ""
 
 //langs=['en:United States:English','pt:Brazil:Portugues','de:Germany:Deutsche','es:Spain:Español','sk:Slovakia:Slovenský','nl:Netherlands:Nederlands','el:Greece:ελληνικά','hu:Hungary:Magyar','he:Israel:עִבְרִית‎','fr:France:français']
-langs = ['en:United States:English','es:Spain:Español','el:Greece:Ελληνικά','pt:Brazil:Portugues','nl:Netherlands:Nederlands','th:Thailand:ไทย','ro:Romania:Română']
+langs = ['en:United States:English','es:Spain:Español','el:Greece:Ελληνικά','pt:Brazil:Portugues','nl:Netherlands:Nederlands','th:Thailand:ไทย','ro:Romania:Română','he:Israel:עִבְרִית‎']
 //  langs=['en:United States:English','es:Spain:Español','pt:Brazil:Portugues','de:Germany:Deutsche','el:Greece:ελληνικά','tr:Turkey:Türk','ro:Romania:Română','nl:Netherlands:Nederlands','hu:Hungary:Magyar','it:Italy:Italiano']
 
 monthNames = []
@@ -983,6 +983,140 @@ function languageInit() {
 		
 		M15 = "Precizia"
 		M15a = "Câte jetoane de precizie au rămas pe masă la sfârșitul meciului?"			
+	} else if (language == "he") {
+		translatorCredit =  "תורגם לעברית ע\"י D-Bug #3316 מעירוני ד', תל אביב"
+
+		yes = "כן"
+		no = "לא"
+		partly = "חלקית"
+		completely = "לחלוטין"
+		resetText = "אתחול"
+		saveText = "שמור" // As verb
+		saveNText = "שמירה" // As noun
+		savescoreText = "שמירת התוצאה"
+		loadsaveText = "טען תוצאה מספר"
+		deletesaveText = "מחיקת כל התוצאות השמורות"
+		importsaveText = "ייבא תוצאות שמורות"
+		exportsaveText = "שיתוף תוצאות"
+		created = "נוצר"
+		savedto = "נשמר ב-"
+		dateText = "תאריך/שעה"
+		totalText = "סה“כ נקודות"
+		savedText = "נשמר"
+		loadedText = "נטען"
+		
+		monthNames = ["", "ינואר", "פברואר", "מרץ", "אפריל", "מאי", "יוני", "יולי", "אוגוסט", "ספטמבר", "אוקטובר", "נובמבר", "דצמבר"];
+		improvementText = "הסטוריית ניקוד"
+		scorerText = "מנקד"
+		timersText = "טיימרים"
+		savesText = "שמורים"
+		startText = "התחל"
+		stopText = "הפסק"
+		pointsText = "נקודות"
+		
+		sketchTitle = "FLL RePLAY תכנון אסטרטגיה"
+		drawingsText = "שרטוטים שמורים"
+		saveDrawingText = "שמור שרטוט"
+		deleteSavedDrawingsText = "מחק שרטוטים שמורים"
+		loadSavedDrawingText = "טען שרטוטים שמורים"
+		exportSavedDrawingsText = "שיתוף שרטוטים"
+		importSavedDrawingsText = "ייבא שרטוטים משותפים"
+		exportPNGText = " PDF יצוא שרטוט כקובץ "
+		
+		doneText = "בוצע"
+		
+		timerText = "טיימר:"
+		stopwatchText = "סטופר:"
+		
+		undefinedText = "לא מוגדר"
+		
+		revisionText = "RePLAY Scorer Version "
+		copyrightText = "Copyright (c) " + versionYear + " האחים סשן"
+		tournamentText = "גרסה של מנקד זה עם פיצ'רים לטורניר נמצאת כאן <a href='http://tournament.flltutorials.com/'>here</a>."
+		
+		title = "FLL RePLAY מנקד"
+		
+		missionNumbering = "M" // i.e. display as M01, M02, etc. (first letter of the word "Mission" in your language)
+		
+		M00 = "בונוס ביקורת ציוד"
+		M00a = "כל הציוד שלכם נכנס באיזור הביקורת הקטן?"
+		
+		M01 = "פרוייקט החדשנות"
+		M01a = "אחד החלקים של המודל נוגע בסמל ריפליי או באיזור האפור שמסביב לספסל?"
+		M01b = "המודל חייב להיות בנוי מלפחות שני חלקי לגו לבנים ובאורך של לפחות ארבע בליטות לגו לפחות בכיוון אחד"
+		
+		M02 = "מונה צעדים"
+		M02a = "חלקו התחתון של המצביע נמצא על"
+		M02b = "כלום"
+		M02c = "מג'נטה"
+		M02d = "צהוב"
+		M02e = "כחול"
+		
+		M03 = "מגלשה"
+		M03a = "דמות מגלשה אחת מחוץ למגלשה?"
+		M03b = "שתי דמויות המגלשה מחוץ למגלשה?"
+		M03c = "דמות מגלשה אחת נמצאת לגמרי בתוך הבית?"
+		M03d = "דמות מגלשה אחת מוחזקת מבלי לגעת בשטיח המשחק על ידי הצמיג הכבד ולא נוגעת בשום דבר אחר?"
+		
+		M04 = "ספסל"
+		M04a = "הספסל שטוח לחלוטין? "
+		M04b = "כמה קוביות נוגעות בשטיח המשחק בתוך אזור משחק הקלאס?"
+		M04c = "משענת הגב לחלוטין מחוץ לשני החורים שלה?"
+		
+		M05 = "כדורסל"
+		M05a = "יש קובייה בארגז? "
+		M05b = "הארגז מונח על מעצור הגובה הלבן האמצעי?"
+		M05c = "הארגז מונח על מעצור הגובה הלבן העליון?"
+		
+		M06 = "מוט מתח"
+		M06a = "הרובוט עבר לחלוטין דרך המסגרת האנכית של מוט המתח בזמן כלשהו?"
+		M06b = "מוט המתח מחזיק 100% מהרובוט מבלי שייגע בשטיח המשחק בסוף המקצה?"
+		
+		M07 = "ריקוד הרובוט"
+		M07a = "בקר הרובוט נמצא לפחות חלקית מעל לרחבת הריקודים ונע בתנועת “ריקוד“ בסוף המקצה?"
+		M07b =  " כל תנועה מחזורית, הן משעשעת והן מקצועית, נחשבת לניקוד – עשו משהו מהנה! עבור ניקוד על משימה 7, לא ניתן לקבל ניקוד גם על “רובוט מוחזק“ במשימה 6 באותו מקצה. "
+		
+		M08 = "בוצ'יה"
+		M08a = "האם שני דגמי השיתוף שלחו קובייה אחת בלבד למקום כלשהו בזירה הנגדית והקוביות האלו תואמות בצבעים זו לזו?"
+		M08b = "כמה קוביות נמצאות לחלוטין המסגרת או מטרה שלכם?"
+		M08c = "יש לפחות קובייה צהובה אחת לחלוטין במטרה שלכם?"
+		
+		M09 = "הפיכת צמיגים"
+		M09a = "האם הצמיג הקל (בעל הסוליה הכחולה) עם המרכז הלבן כלפי מעלה?"
+		M09b = "האם הצמיג הכבד (בעל הסוליה השחורה) עם המרכז הלבן כלפי מעלה?"
+		M09c = "כמה צמיגים שהמרכז הלבן שלהם פונה כלפי מעלה נמצאים לגמרי בתוך מעגל המטרה הגדול?"
+		M09d = "אם הצמיג הכבד חוצה בשלב כלשהו, אפילו חלקית, את קו ההיפוך, הוא מקנה 0 נקודות. קו ההפיכה רץ כל הדרך מצפון לדרום, ורק חלק ממנו נראה."
+		
+		M10 = "טלפון נייד"
+		M10a = "הצד הלבן של הטלפון פונה כלפי מעלה והטלפון מונח על השטיח בלבד?"
+		
+		M11 = "הליכון"
+		M11a = "הרובוט סובב את הגלגלות כך שהמצביע מצביע על"
+		M11b = "כלום"
+		M11c = "אפור"
+		M11d = "אדום"
+		M11e = "כתום"
+		M11f = "צהוב"
+		M11g = "ירוק בהיר"
+		M11h = "ירוק כהה"
+		
+		M12 = "מכונת חתירה"
+		M12a = "האם הגלגל החופשי נמצא לגמרי מחוץ למעגל הגדול?"
+		M12b = "האם הגלגל החופשי נמצא לגמרי בתוך המעגל הקטן?"
+		
+		M13 = "מכונת משקולות"
+		M13a = "המעצור נמצא מתחת לזרוע ומצב הזרוע"
+		M13b = "כלום"
+		M13c = "כחול"
+		M13d = "מג'נטה"
+		M13e = "צהוב"
+		
+		M14 = "יחידות בריאות"
+		M14a = "כמה יחידות בריאות נוגעות בסמל ריפליי או באזור האפור שמסביב לספסל?"
+		M14b = "כמה יחידות בריאות מושחלות על העמוד של מוט המתח כמו שמודגם – מקסימום ארבע – ולא נוגעות בשום ציוד?"
+		
+		M15 = "דיוק"
+		M15a = "כמה אסימוני דיוק נותרו על הזירה?"		
 	}
 
 
