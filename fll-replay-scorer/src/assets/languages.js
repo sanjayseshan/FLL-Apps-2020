@@ -6,14 +6,14 @@
 
 // Universal
 
-versionNum = "2.0"
-versionDay = 21
-versionMonth = 9
+versionNum = "2.1"
+versionDay = 3
+versionMonth = 10
 versionYear = 2020
 versionText = ""
 
 //langs=['en:United States:English','pt:Brazil:Portugues','de:Germany:Deutsche','es:Spain:Español','sk:Slovakia:Slovenský','nl:Netherlands:Nederlands','el:Greece:ελληνικά','hu:Hungary:Magyar','he:Israel:עִבְרִית‎','fr:France:français']
-langs = ['en:United States:English','es:Spain:Español','el:Greece:Ελληνικά','pt:Brazil:Portugues','nl:Netherlands:Nederlands','th:Thailand:ไทย','ro:Romania:Română','he:Israel:עִבְרִית‎']
+langs = ['en:United States:English','es:Spain:Español','el:Greece:Ελληνικά','pt:Brazil:Portugues','nl:Netherlands:Nederlands','th:Thailand:ไทย','ro:Romania:Română','he:Israel:עִבְרִית‎',"sl:Slovenia:slovenščino"]
 //  langs=['en:United States:English','es:Spain:Español','pt:Brazil:Portugues','de:Germany:Deutsche','el:Greece:ελληνικά','tr:Turkey:Türk','ro:Romania:Română','nl:Netherlands:Nederlands','hu:Hungary:Magyar','it:Italy:Italiano']
 
 monthNames = []
@@ -1117,6 +1117,141 @@ function languageInit() {
 		
 		M15 = "דיוק"
 		M15a = "כמה אסימוני דיוק נותרו על הזירה?"		
+	} else if (language == "sl") {
+		translatorCredit = "V slovenščino prevedel Primož Dornik član skupine First Prule League"
+
+		yes = "Da"
+		no = "Ne"
+		partly = "Delno"
+		completely = "Popolnoma"
+		resetText = "Ponastavi"
+		saveText = "Shrani" // As verb
+		saveNText = "Shrani" // As noun
+		savescoreText = "Shrani točke"
+		loadsaveText = "Naloži število točk."
+		deletesaveText = " Izbriši vse shranjene rezultate"
+		importsaveText = "Uvozi deljen rezultat"
+		exportsaveText = "Deli rezultat"
+		created = " Ustvarjeno"
+		savedto = " Shranjeno v"
+		dateText = "Datum/Čas"
+		totalText = " Skupno število točk"
+		savedText = "Shranjeno"
+		loadedText = " Naloženo"
+		
+		monthNames = ["", "Januar", "Februar", "Marec", "April", "Maj", "Junij", "Julij", "August", "September", "Oktober", "November", "December"];
+		improvementText = "Zgodovina rezultatov"
+		scorerText = "Točkovnik"
+		timersText = "Časovnik"
+		savesText = "Shranjeni rezultati"
+		startText = "Začni"
+		stopText = "Ustavi"
+		pointsText = "Točke"
+		
+		sketchTitle = "FLL RePLAY Načrtovalec strategije"
+		drawingsText = "Shranjene slike"
+		saveDrawingText = "Shrani sliko"
+		deleteSavedDrawingsText = "Izbriši vse shranjene slike"
+		loadSavedDrawingText = " Naloži shranjeno sliko "
+		exportSavedDrawingsText = "Deli sliko"
+		importSavedDrawingsText = " Uvozi deljene slike "
+		exportPNGText = " Izvozi sliko kot PNG"
+		
+		doneText = " Dokončano"
+		
+		timerText = "Časovnik:"
+		stopwatchText = "Štoparica:"
+		
+		undefinedText = "nedoločeno"
+		
+		revisionText = "RePLAY Točkovnik  Verzija:"
+		copyrightText = "Copyright (c) " + versionYear + " Seshan Brothers"
+		tournamentText = "Verzijo tega točkovnika z dodanimi funkcijami najdete na <a href='http://tournament.flltutorials.com/'>tukaj</a>."
+		
+		title = "FLL RePLAY Točkovnik"
+		
+		missionNumbering = "M" // i.e. display as M01, M02, etc. (first letter of the word "Mission" in your language)
+		
+		M00 = "Pred začetkom"
+		M00a = " Ali se oprema ekipe prilega majhni coni za pregled?"
+		
+		M01 = " Inovativni model"
+		M01a = " Ali se kateri koli del modela dotika logotipa REPLAY ali sive površine okoli klopi?"
+		M01b = " Model mora biti narejen iz najmanj dveh belih gradniki LEGO in mora v vsaj eno smer meriti vsaj toliko, kot štirje LEGO pini."
+		
+		M02 = "Števec korakov"
+		M02a = "Konica kazalca leži na"
+		M02b = "Začetku"
+		M02c = "Roza podlagi"
+		M02d = "Rumeni podlagi"
+		M02e = "Modri podlagi"
+		
+		M03 = "Tobogan"
+		M03a = "Ali je prva figura spuščena iz tobogana?"
+		M03b = " Ali sta obe figgurici spuščeni iz tobogana?"
+		M03c = "Ali je figurica popolnoma v Domu?"
+		M03d = "Ali se figurica ne dotika podlage, je na težji gumi in se ne dotika ničesar drugega?"
+		
+		M04 = "Klop"
+		M04a = "Ali je klop položena na tla?"
+		M04b = "Koliko kock se dotika podlage v posameznih prostorih?"
+		M04c = "Ali je naslonjalo popolnoma iz obeh lukenj?"
+		
+		M05 = "Košarka"
+		M05a = "Ali je kocka v košu?"
+		M05b = "Ali je koš ustavljen na sredini belega vodila?"
+		M05c = "Ali je koš ustavljen na vrhu belega vodila?"
+		
+		M06 = "Drog za zgibe"
+		M06a = "Se je robot kadar koli popolnoma prešel skozi pokončni okvir?"
+		M06b = "Ali robot visi na drogue za zgibe na koncu tekme?"
+		
+		M07 = "Robot pleše"
+		M07a = " Ali je kocka robota med plesom vsaj delno and površino plesišča na koncu tekme?"
+		M07b = " Vsaka ponavljajoča se akcija šteje za ples - naredite nekaj zabavnega! Pri M07 na isti tekmi ne morete doseči rezultata iz M06."
+		
+		M08 = "Balinanje"
+		M08a = "Ali sta obe skupini poslali eno kocko na sosednje polje in se barva obeh kock ujemata?"
+		M08b = "Koliko kock je popolnoma v okvirju ali tarči?"
+		M08c = "Ali je vsaj ena rumena kocka v vaši tarči?"
+		
+		M09 = "Obračanje gume"
+		M09a = "Ali je lažja (modra) guma obrnjena z belim platiščem navzgor?"
+		M09b = "Ali je težja (črna) guma obrnjena z belim platiščem navzgor?"
+		M09c = "Koliko gum, obrnjenih z belim platiščem navzgor, je popolnoma v velikem ciljnem krogu?"
+		M09d = "Če težka guma kadar koli, celo delno, prečka rdečo črto, točk ni"
+		
+		M10 = "Mobilnik"
+		M10a = "Ali je mobilnik obrnjen z belo stranjo navzgor in se dotika samo podlage?"
+		
+		M11 = "Tekalna steza"
+		M11a = "Robot je zavrtel valje, tako da kazalec kaže na "
+		M11b = "Črno"
+		M11c = "Sivo"
+		M11d = "Rdečo"
+		M11e = "Oranžno"
+		M11f = "Rumeno"
+		M11g = "Svetlo zelena"
+		M11h = "Temno zelena"
+		
+		M12 = "Vesljač"
+		M12a = "Ali je prosto kolo popolnoma zunaj velikega kroga?"
+		M12b = "Ali je prosto kolo popolnoma v majhnem krogu?"
+		
+		M13 = "Dvigovanje uteži"
+		M13a = "Zatič je pod vzvodom in je nastavljen pod"
+		M13b = "Črna"
+		M13c = "Modra"
+		M13d = "Roza"
+		M13e = "Rumena"
+		
+		M14 = "Enota zdravja"
+		M14a = " Koliko enot zdravja se dotika logotipa RePLAY ali sive površine okoli klopi?"
+		M14b = " Koliko enot zdravja je napetih čez drog za zgibe, kot je prikazano - največ štiri - in se ne dotikajo nobenih nastavkov ali robota?"
+		
+		M15 = "Natančnost"
+		M15a = "Koliko žetonov za natančnost vam je ostalo?"
+		
 	}
 
 
