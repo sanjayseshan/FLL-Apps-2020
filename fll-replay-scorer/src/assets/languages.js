@@ -6,8 +6,8 @@
 
 // Universal
 
-versionNum = "2.1"
-versionDay = 3
+versionNum = "2.2"
+versionDay = 10
 versionMonth = 10
 versionYear = 2020
 versionText = ""
@@ -1118,7 +1118,7 @@ function languageInit() {
 		M15 = "דיוק"
 		M15a = "כמה אסימוני דיוק נותרו על הזירה?"		
 	} else if (language == "sl") {
-		translatorCredit = "V slovenščino prevedel Primož Dornik član skupine First Prule League"
+		translatorCredit = "V slovenščino prevedel Primož Dornik član skupine First Prule League iz Osnovne šole Prule, Ljubljana"
 
 		yes = "Da"
 		no = "Ne"
@@ -1142,7 +1142,7 @@ function languageInit() {
 		monthNames = ["", "Januar", "Februar", "Marec", "April", "Maj", "Junij", "Julij", "August", "September", "Oktober", "November", "December"];
 		improvementText = "Zgodovina rezultatov"
 		scorerText = "Točkovnik"
-		timersText = "Časovnik"
+		timersText = "Štoparica"
 		savesText = "Shranjeni rezultati"
 		startText = "Začni"
 		stopText = "Ustavi"
@@ -1177,7 +1177,7 @@ function languageInit() {
 		
 		M01 = " Inovativni model"
 		M01a = " Ali se kateri koli del modela dotika logotipa REPLAY ali sive površine okoli klopi?"
-		M01b = " Model mora biti narejen iz najmanj dveh belih gradniki LEGO in mora v vsaj eno smer meriti vsaj toliko, kot štirje LEGO pini."
+		M01b = " Model mora biti narejen iz najmanj dveh belih gradniki LEGO in mora vsaj v eno smer meriti vsaj toliko, kot štirje LEGO pini."
 		
 		M02 = "Števec korakov"
 		M02a = "Konica kazalca leži na"
@@ -1188,7 +1188,7 @@ function languageInit() {
 		
 		M03 = "Tobogan"
 		M03a = "Ali je prva figura spuščena iz tobogana?"
-		M03b = " Ali sta obe figgurici spuščeni iz tobogana?"
+		M03b = " Ali sta obe figurici spuščeni iz tobogana?"
 		M03c = "Ali je figurica popolnoma v Domu?"
 		M03d = "Ali se figurica ne dotika podlage, je na težji gumi in se ne dotika ničesar drugega?"
 		
@@ -1204,14 +1204,14 @@ function languageInit() {
 		
 		M06 = "Drog za zgibe"
 		M06a = "Se je robot kadar koli popolnoma prešel skozi pokončni okvir?"
-		M06b = "Ali robot visi na drogue za zgibe na koncu tekme?"
+		M06b = "Ali robot visi na drogu za zgibe na koncu tekme?"
 		
 		M07 = "Robot pleše"
 		M07a = " Ali je kocka robota med plesom vsaj delno and površino plesišča na koncu tekme?"
-		M07b = " Vsaka ponavljajoča se akcija šteje za ples - naredite nekaj zabavnega! Pri M07 na isti tekmi ne morete doseči rezultata iz M06."
+		M07b = " Vsaka ponavljajoča se akcija šteje za ples - naredite nekaj zabavnega! Na isti tekmi ne morete opraviti misij M06 in M07 hkrati."
 		
 		M08 = "Balinanje"
-		M08a = "Ali sta obe skupini poslali eno kocko na sosednje polje in se barva obeh kock ujemata?"
+		M08a = "Ali sta obe skupini poslali eno kocko na sosednje polje in se barvi ujemata?"
 		M08b = "Koliko kock je popolnoma v okvirju ali tarči?"
 		M08c = "Ali je vsaj ena rumena kocka v vaši tarči?"
 		
@@ -1240,18 +1240,17 @@ function languageInit() {
 		
 		M13 = "Dvigovanje uteži"
 		M13a = "Zatič je pod vzvodom in je nastavljen pod"
-		M13b = "Črna"
-		M13c = "Modra"
+		M13b = "Črno"
+		M13c = "Modro"
 		M13d = "Roza"
-		M13e = "Rumena"
+		M13e = "Rumeno"
 		
 		M14 = "Enota zdravja"
 		M14a = " Koliko enot zdravja se dotika logotipa RePLAY ali sive površine okoli klopi?"
 		M14b = " Koliko enot zdravja je napetih čez drog za zgibe, kot je prikazano - največ štiri - in se ne dotikajo nobenih nastavkov ali robota?"
 		
 		M15 = "Natančnost"
-		M15a = "Koliko žetonov za natančnost vam je ostalo?"
-		
+		M15a = "Koliko žetonov za natančnost vam je ostalo?"		
 	}
 
 
