@@ -1,0 +1,102 @@
+<h1>
+  <script>
+function textFileToArray(filename) {
+    var reader = (window.XMLHttpRequest != null ) 
+               ? new XMLHttpRequest() 
+               : new ActiveXObject("Microsoft.XMLHTTP");
+    reader.open("GET", filename, false );
+    reader.send();
+    return reader.responseText.split(/\r\n|\n|\r/);  //split(/(\r\n|\n)/g) 
+}
+    document.write(textFileToArray('tournament.txt'));</script>
+
+ Tournament Dashboard
+</h1>
+
+<p style="font-size: 150%;">
+  Please bookmark this page. Each of these links are unique for your particular tournament.
+  <br>
+  <br>
+  <b>STEP 1:</b> Fill out the teams list and number of rounds in the
+  <script>
+    dir = window.location.hash.substring(1);
+    document.write('<a href="login.php?data=setup">Tournament Director Setup Panel</a>.<br><br>');
+  </script>
+
+  <b>STEP 2:</b> Referees can now score teams using this special
+  version of the EV3Lessons scorer which gives them a dropdown menu
+  will all the teams the Admin entered in Step 1. Once each referee
+  hits "Save", the score will be added to the Score Displayer in Step
+  3 below.
+
+  <script>
+    document.write('<a href="login.php?data=scorer&hash='+dir+'">Tournament Scorer for Referee </a>');
+//    document.write(' or <a href="login.php?data=mobile&hash='+dir+'">use mobile format</a><br><br>');
+  </script>
+  <br><br>
+... or if you are a judge, click on the following and sign in:
+<br><script>
+//    document.write('<a href="login.php?data=corevalue&hash='+dir+'">Tournament Core Values Rubrics</a><br>');
+//    document.write('<a href="login.php?data=project&hash='+dir+'">Tournament Project Rubrics</a><br>');
+//    document.write('<a href="login.php?data=rdes&hash='+dir+'">Tournament Robot Design Rubrics</a>');
+  </script><br><br>
+  <b>STEP 3:</b> If you want to display scores for the audience, you
+  can show the content from this page.
+
+  <script>
+  document.write('<a href="readscores.html#'+dir+'">Score Displayer for Audience</a><br><br>');
+  </script>
+<!--
+  <b>STEP 4:</b> If at any point, the Head Referee needs to make an
+  adjustment to the scores because a scoring error is discovered, the
+  Head Referee can access the Score Editor page.
+
+  <script>
+    document.write('<a href="login.php?data=edit">Score Editor for Head Referee</a><br>');
+  </script>-->
+  <br>
+  <br><script>
+      document.write('<a href="recovery.php?data='+window.location.hash.substring(1)+'">Password Recovery</a><br>');
+</script>
+ <br>
+ <br>
+The current version of the Tournament Scoring System is v<script>
+function textFileToArray(filename) {
+    var reader = (window.XMLHttpRequest != null )
+               ? new XMLHttpRequest()
+               : new ActiveXObject("Microsoft.XMLHTTP");
+    reader.open("GET", filename, false );
+    reader.send();
+    return reader.responseText.split(/\r\n|\n|\r/);  //split(/(\r\n|\n)/g)
+}
+document.write(textFileToArray('/version.txt')[0]);
+  </script>
+
+
+
+
+ <br>
+You are running v<script>
+document.write(textFileToArray(dir+'/version.txt')[0]);
+  </script>
+ (You can upgrade in the setup panel :-)
+
+<!--
+. If you are using anything earlier (created tournament before 9:00 PM 10/18/15) some links may be broken/inaccessable please use the <script>
+   function UrlExists(url)
+{
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status!=404;
+   }
+ if (UrlExists(dir + '/version.txt') != true) { 
+   if (UrlExists(dir + '/tournament.txt') != true) { 
+      document.write('<a href="/upgrade.php#'+decodeURIComponent(window.location.hash.substring(1))+'">Upgrade Assistant</a><br>');
+   } else {
+document.write('<a href="/upgrade.php#'+textFileToArray(window.location.hash.substring(1) + '/tournament.txt')+'">Upgrade Assistant</a><br>');
+   }} else {document.write('upgrade link (moved to Tournament Director Setup Panel).')}
+ </script>
+-->
+  <br>
+</p>
