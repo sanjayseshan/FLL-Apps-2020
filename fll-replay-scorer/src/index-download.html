@@ -247,6 +247,26 @@ function tournamentload() {
                 </div>
               </td>
             </tr>
+            <tr>
+              <td colspan="2">
+                <div style="max-width: 500px">
+                  <text id="nameText"> Name</text>: <input id="name" type="text">
+                </div>
+              </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div style="max-width: 500px">
+                        <text id="roleText"> Role</text>: 
+                        <select data-role="none" id="role">
+                            <option value=""></option>
+                            <option value="TM">Team</option>
+                            <option value="RF">Referee</option>
+                            <option value="HR">Head Referee</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
           </table>
     
 
@@ -439,9 +459,31 @@ function tournamentload() {
     function downloadScore() {
         var currentTime = new Date()
         var day = currentTime.getDate()  
-        
-        data = document.getElementById("team_num").value+";"+document.getElementById("round_num").value+";"+String(getvar())
-        filename = "team-"+document.getElementById("team_num").value+"_round-"+document.getElementById("round_num").value+"_score-"+document.getElementById("allpoints").innerHTML+"_"+currentTime+".TDRRP"
+
+        name = document.getElementById("name").value
+        role = document.getElementById("role").value
+        team = document.getElementById("team_num").value
+        teamSV = (parseInt(document.getElementById("team_num").value)).toLocaleString('en-US', {minimumIntegerDigits: 8, useGrouping:false})
+        round = document.getElementById("round_num").value
+        score = String(getvar())
+        points = (parseInt(document.getElementById("allpoints").innerHTML)).toLocaleString('en-US', {minimumIntegerDigits: 4, useGrouping:false})
+
+        year = (new Date()).getUTCFullYear()
+        month = ((new Date()).getUTCMonth()).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
+        day = ((new Date()).getUTCDay()).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
+
+        hours = ((new Date()).getUTCHours()).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
+        minutes = ((new Date()).getUTCMinutes()).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
+        seconds = ((new Date()).getUTCSeconds()).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
+
+        time = year+"-"+month+"-"+day+"_"+hours+minutes+seconds
+        person = role+"-"+name
+        match = "team-"+teamSV+"_round-"+round+"_score-"+points
+
+        filename = match+"_"+time+"_"+person+".TDRRP"
+
+        data = team+";"+round+";"+score+";"+role+";"+name+";"+filename
+        // filename = "team-"+document.getElementById("team_num").value+"_round-"+document.getElementById("round_num").value+"_score-"+document.getElementById("allpoints").innerHTML+"_"+currentTime+".TDRRP"
 
         download(data, filename, "txt")
     }
@@ -454,6 +496,10 @@ function tournamentload() {
         team = data[0]
         round = data[1]
         load = data[2]
+        role = data[3]
+        name = data[4]
+        document.getElementById("name").value = name
+        document.getElementById("role").value = role
         document.getElementById("team_num").value = team
         document.getElementById("round_num").value = round
         loadsave(load)
