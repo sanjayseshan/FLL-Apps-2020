@@ -391,7 +391,7 @@ function tournamentload() {
 
         <!--  <text id="tournamentText">Tournament</text><br><br>-->
 
-        <text id="revisionText">Scorer</text> <text id="versionText">v3.6.0</text> DL 1.1 (26 Nov 2020)
+        <text id="revisionText">Scorer</text> <text id="versionText">v3.6.0</text> DL 1.2 (26 Nov 2020)
         <!-- Scorer v3.5.0 -->
         <br>
         <br><text id="copyrightText">Copyright</text><br>
@@ -478,9 +478,9 @@ function tournamentload() {
 
         time = year+"-"+month+"-"+day+"_"+hours+minutes+seconds
         person = role+"-"+name
-        match = "team-"+teamSV+"_round-"+round+"_score-"+points
+        match = "team-"+teamSV
 
-        filename = match+"_"+time+"_"+person+".TDRRP"
+        filename = match+"_"+time+"_round-"+round+"_score-"+points+"_"+person+".TDRRP"
 
         data = team+";"+round+";"+score+";"+role+";"+name+";"+filename
         // filename = "team-"+document.getElementById("team_num").value+"_round-"+document.getElementById("round_num").value+"_score-"+document.getElementById("allpoints").innerHTML+"_"+currentTime+".TDRRP"
