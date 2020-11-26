@@ -250,14 +250,14 @@ function tournamentload() {
             <tr>
               <td colspan="2">
                 <div style="max-width: 500px">
-                  <text id="nameText"> Name</text>: <input id="name" type="text">
+                  <text id="nameText">Your Name</text>: <input id="name" type="text">
                 </div>
               </td>
             </tr>
             <tr>
                 <td colspan="2">
                     <div style="max-width: 500px">
-                        <text id="roleText"> Role</text>: 
+                        <text id="roleText">Role</text>: 
                         <select data-role="none" id="role">
                             <option value=""></option>
                             <option value="TM">Team</option>
@@ -469,8 +469,8 @@ function tournamentload() {
         points = (parseInt(document.getElementById("allpoints").innerHTML)).toLocaleString('en-US', {minimumIntegerDigits: 4, useGrouping:false})
 
         year = (new Date()).getUTCFullYear()
-        month = ((new Date()).getUTCMonth()).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
-        day = ((new Date()).getUTCDay()).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
+        month = ((new Date()).getUTCMonth()+1).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
+        day = ((new Date()).getUTCDate()).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
 
         hours = ((new Date()).getUTCHours()).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
         minutes = ((new Date()).getUTCMinutes()).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
