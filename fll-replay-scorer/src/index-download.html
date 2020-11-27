@@ -254,7 +254,7 @@ function tournamentload() {
                 </div>
               </td>
             </tr>
-            <tr>
+            <!-- <tr>
                 <td colspan="2">
                     <div style="max-width: 500px">
                         <text id="roleText">Role</text>: 
@@ -266,7 +266,7 @@ function tournamentload() {
                         </select>
                     </div>
                 </td>
-            </tr>
+            </tr> -->
           </table>
     
 
@@ -461,7 +461,9 @@ function tournamentload() {
         var day = currentTime.getDate()  
 
         name = document.getElementById("name").value
-        role = document.getElementById("role").value
+        // role = document.getElementById("role").value
+        role = "RP"
+
         team = document.getElementById("team_num").value
         teamSV = (parseInt(document.getElementById("team_num").value)).toLocaleString('en-US', {minimumIntegerDigits: 8, useGrouping:false})
         round = document.getElementById("round_num").value
@@ -499,7 +501,7 @@ function tournamentload() {
         role = data[3]
         name = data[4]
         document.getElementById("name").value = name
-        document.getElementById("role").value = role
+        // document.getElementById("role").value = role
         document.getElementById("team_num").value = team
         document.getElementById("round_num").value = round
         loadsave(load)
