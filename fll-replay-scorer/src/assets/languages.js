@@ -8,7 +8,7 @@
 
 versionNum = "2.3"
 versionDay = 3
-versionMonth = 11
+versionMonth = 12
 versionYear = 2020
 versionText = ""
 
