@@ -73,7 +73,7 @@ function languageInit() {
 
 	revisionText = "RePLAY Scorer Version "
 	copyrightText = "Copyright (c) " + versionYear + " Seshan Brothers"
-	tournamentText = "A version of this scorer with added features needed for a tournament can be found <a href='http://tournament.flltutorials.com/'>here</a>."
+	tournamentText = "A version of this scorer with added features needed for a tournament can be found <a href='tournament.html' data-ajax='false'>here</a>."
 
 	title = "FLL RePLAY Scorer"
 
@@ -208,7 +208,7 @@ function languageInit() {
 
 		revisionText = "Marcador RePLAY versión "
 		copyrightText = "Los derechos de autor (c) " + versionYear + " Seshan Brothers"
-		tournamentText = "Un versión de este marcador con más carictaristicas para un torneo puede se encontrado a <a href='http://tournament.flltutorials.com/'>here</a>."
+		tournamentText = "Un versión de este marcador con más carictaristicas para un torneo puede se encontrado a <a href='tournament.html' data-ajax='false'>here</a>."
 
 		title = "Marcador de FLL RePLAY"
 
@@ -351,7 +351,7 @@ function languageInit() {
 		
 		revisionText = "RePLAY Scorer Έκδοση "
 		copyrightText = "Copyright (c) " + versionYear + " Seshan Brothers"
-		tournamentText = "Μία έκδοση με δυνατότητες και λειτουργείες που απαιτούνται σε ένα event μπορείτε να βρείτε εδώ <a href='http://tournament.flltutorials.com/'>here</a>."
+		tournamentText = "Μία έκδοση με δυνατότητες και λειτουργείες που απαιτούνται σε ένα event μπορείτε να βρείτε εδώ <a href='tournament.html' data-ajax='false'>here</a>."
 		
 		title = "FLL RePLAY Βαθμολογία"
 		
@@ -490,7 +490,7 @@ function languageInit() {
 		
 		revisionText = "Pontuador RePLAY versão "
 		copyrightText = "Copyright (c) " + versionYear + " Seshan Brothers"
-		tournamentText = " Uma versão desse pontuador com recursos para torneios pode ser encontrada em <a href='http://tournament.flltutorials.com/'>aqui</a>."
+		tournamentText = " Uma versão desse pontuador com recursos para torneios pode ser encontrada em <a href='tournament.html' data-ajax='false'>aqui</a>."
 		
 		title = "Pontuador FLL RePLAY"
 		
@@ -627,7 +627,7 @@ function languageInit() {
 		
 		revisionText = "RePLAY scorer versie "
 		copyrightText = "Copyright (c) " + versionYear + " Seshan Brothers"
-		tournamentText = "Een versie van deze scorer met extra functies die nodig zijn voor een toernooi is te vinden op <a href='http://tournament.flltutorials.com/'></a>."
+		tournamentText = "Een versie van deze scorer met extra functies die nodig zijn voor een toernooi is te vinden op <a href='tournament.html' data-ajax='false'></a>."
 		
 		title = "FLL RePLAY scorer"
 		
@@ -762,7 +762,7 @@ function languageInit() {
 
 		revisionText = "RePLAY Scorer เวอร์ชัน "
 		copyrightText = "Copyright (c) " + versionYear + " Seshan Brothers"
-		tournamentText = "เครื่องมือคำนวณคะแนนเวอร์ชันสำหรับการแข่งขันสามารถพบได้ที่  <a href='http://tournament.flltutorials.com/'>เว็บไซต์</a>."
+		tournamentText = "เครื่องมือคำนวณคะแนนเวอร์ชันสำหรับการแข่งขันสามารถพบได้ที่  <a href='tournament.html' data-ajax='false'>เว็บไซต์</a>."
 
 		title = "FLL RePLAY Scorer"
 
@@ -898,7 +898,7 @@ function languageInit() {
 		
 		revisionText = "Calculator de scor RePLAY. Versiunea "
 		copyrightText = "Copyright (c) " + versionYear + " Seshan Brothers"
-		tournamentText = "O versiunea a calculatorului de scor cu funcționalități necesare în cadrul unui turneu este disponibil <a href='http://tournament.flltutorials.com/'>aici</a>."
+		tournamentText = "O versiunea a calculatorului de scor cu funcționalități necesare în cadrul unui turneu este disponibil <a href='tournament.html' data-ajax='false'>aici</a>."
 		
 		title = "Calculator de scor FLL RePLAY"
 		
@@ -1032,7 +1032,7 @@ function languageInit() {
 		
 		revisionText = "RePLAY Scorer Version "
 		copyrightText = "Copyright (c) " + versionYear + " האחים סשן"
-		tournamentText = "גרסה של מנקד זה עם פיצ'רים לטורניר נמצאת כאן <a href='http://tournament.flltutorials.com/'>here</a>."
+		tournamentText = "גרסה של מנקד זה עם פיצ'רים לטורניר נמצאת כאן <a href='tournament.html' data-ajax='false'>here</a>."
 		
 		title = "FLL RePLAY מנקד"
 		
@@ -1166,7 +1166,7 @@ function languageInit() {
 		
 		revisionText = "RePLAY Točkovnik  Verzija:"
 		copyrightText = "Copyright (c) " + versionYear + " Seshan Brothers"
-		tournamentText = "Verzijo tega točkovnika z dodanimi funkcijami najdete na <a href='http://tournament.flltutorials.com/'>tukaj</a>."
+		tournamentText = "Verzijo tega točkovnika z dodanimi funkcijami najdete na <a href='tournament.html' data-ajax='false'>tukaj</a>."
 		
 		title = "FLL RePLAY Točkovnik"
 		
