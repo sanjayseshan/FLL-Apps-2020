@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -5,9 +6,7 @@
 
     <title>FLL Rubrics</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, minimum-scale=0.01, maximum-scale=1.0, user-scalable=yes" />
-    <!-- <meta name="viewport" content="width=1024, initial-scale=.4, maximum-scale=12.0, minimum-scale=.25, user-scalable=yes"> -->
-
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
     <meta name="color-scheme" content="light dark" />
 
     <script src="assets/js/jquery-1.11.3.min.js"></script>
@@ -256,6 +255,21 @@
                 </td>
             </tr>
         </table>
+        <table style="padding-left: 10px; ">
+            <tr>
+              <td>
+                <div style="max-width: 100px">
+                  <text id="teamText">  Team</text> No.:  <input value="0" id="team_num" type="number">
+                </div>
+              </td>
+              <td colspan="2">
+                <div style="max-width: 500px">
+                  <text id="nameText">Your Name</text>: <input id="name" type="text">
+                </div>
+              </td>
+            </tr>
+
+          </table>
 
 
 
@@ -266,22 +280,6 @@
             <div id="tabs-1">
                 <form>
 
-                    <div id="cvlist" style="max-width: 1024px;">
-                        <script src="assets/corevalues.js"></script>
-
-                    </div>
-                    <button onclick="setTimeout(function()
-        {
-          rubricCalc()
-    
-        }, 100);" style="max-width: 500px" type="reset">Reset</button>
-                </form>
-                
-            </div>
-
-            <div id="tabs-2">
-                <form>
-
                     <div id="projectlist" style="max-width: 1024px;">
                         <script src="assets/project.js"></script>
 
@@ -290,34 +288,66 @@
           {
             rubricCalc()
       
-          }, 100);" style="max-width: 500px" type="reset">Reset</button>
+          }, 100);" style="max-width: 500px" type="reset" class="no-print">Reset</button>
                 </form>
-                
             </div>
-            <div id="tabs-3">
-                <form>
-
-                    <div id="robotlist" style="max-width: 1024px;">
-                        <script src="assets/robot.js"></script>
-
-                    </div>
-                    <button onclick="    setTimeout(function()
-          {
-            rubricCalc()
-      
-          }, 100);" style="max-width: 500px" type="reset">Reset</button>
-                </form>
-
-
-            </div>
-
-
-            <div id="tabs-4">
+            <br><br>
+            <div id="tabs-4" class="no-print">
 
                 <div style="max-width:500px">
 
-                    <button type="button" onclick="saverRB();maximumRB = window.localStorage.DRRBSscorer.split('&&&').length-1">Save
-            Rubric</button>
+<script>
+        function downloadScore() {
+            var currentTime = new Date()
+            var day = currentTime.getDate()  
+
+            name = document.getElementById("name").value
+            // role = document.getElementById("role").value
+            role = "RP"
+
+            team = document.getElementById("team_num").value
+            teamSV = (parseInt(document.getElementById("team_num").value)).toLocaleString('en-US', {minimumIntegerDigits: 8, useGrouping:false})
+            round = 0
+            score = getRBSaveStr()
+            points = (parseInt(document.getElementById("projpts").innerHTML)).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
+
+            year = (new Date()).getUTCFullYear()
+            month = ((new Date()).getUTCMonth()+1).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
+            day = ((new Date()).getUTCDate()).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
+
+            hours = ((new Date()).getUTCHours()).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
+            minutes = ((new Date()).getUTCMinutes()).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
+            seconds = ((new Date()).getUTCSeconds()).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
+
+            time = year+"-"+month+"-"+day+"_"+hours+minutes+seconds
+            person = role+"-"+name
+            match = "team-"+teamSV
+
+            filename = match+"_"+time+"_round-"+round+"_score-"+points+"_"+person+".TDRIP"
+
+            data = team+";"+round+";"+score+";"+role+";"+name+";"+filename
+            // filename = "team-"+document.getElementById("team_num").value+"_round-"+document.getElementById("round_num").value+"_score-"+document.getElementById("allpoints").innerHTML+"_"+currentTime+".TDRIP"
+
+            download(data, filename, "txt")
+    }
+
+
+    function loadScore(save) {
+        console.log(save)
+        data = save.split(";")
+        console.log(data)
+        team = data[0]
+        round = data[1]
+        load = data[2]
+        role = data[3]
+        name = data[4]
+        document.getElementById("name").value = name
+        // document.getElementById("role").value = role
+        document.getElementById("team_num").value = team
+        // document.getElementById("round_num").value = round
+        loadRBsave(load)
+    }
+</script>
 
                     <br>
                     <style>
@@ -333,8 +363,8 @@
                     </style>
 
                     <script>
-                        if (window.localStorage.DRRBSscorer != undefined) {
-                            maximumRB = window.localStorage.DRRBSscorer.split('&&&').length - 1;
+                        if (window.localStorage.DRERBSscorer != undefined) {
+                            maximumRB = window.localStorage.DRERBSscorer.split('&&&').length - 1;
                             min = 1;
                             start = 1;
                         } else {
@@ -343,60 +373,7 @@
                             start = 0
                         }
                     </script>
-                    <div class="ui-grid-b ui-responsive">
-                        <div style="width: 170" class="ui-block-a" align="left">
-                            <div class="button-wrap">
-                                <button style="text-align: left;" id="loadText" class="ui-shadow ui-btn ui-corner-all" type="button" onclick="loaderRB(document.getElementById('saveidRB').value)">Load Rubric No.</button>
-                            </div>
-
-                        </div>
-                        <!--
-                <div style="max-width: 60px; " class="ui-block-b">
-  
-                  <div data-role="stepper" data-direction="vertical">
-  
-                    <div style="max-width: 60px; " class="button-wrap">
-                      <input type="button" value="-"
-                        onclick="document.getElementById('saveid').value--;  if (document.getElementById('saveid').value < 1) {document.getElementById('saveid').value = 1}">
-                    </div>
-                  </div>
-                </div>
-                <div class="ui-block-c" style="max-width: 60px; ">
-                  <div style="max-width: 60px;" class="button-wrap">
-                    <input style="height: 41px" type="number" data-highlight="true" data-theme="b"
-                      onchange=" if (this.value > maximum) {this.value = maximum}" search="2" class="quantity"
-                      data-show-value="true" name="saveid" id="saveid" value="1" min="1" step="1">
-                  </div>
-                </div>
-                <div class="ui-block-d" style="max-width: 60px; ">
-                  <div style="max-width: 60px; " class="button-wrap">
-                    <input type="button" value="+"
-                      onclick="document.getElementById('saveid').value++; if (document.getElementById('saveid').value > maximum) {document.getElementById('saveid').value = maximum}">
-                  </div>
-                </div>
-              -->
-                        <input id="saveidRB" type="text" data-inline="true" data-role="spinbox" onchange="if (this.value > maximumRB) {this.value = maximumRB} " min="1" value="0">
-
-                        <!--       </div>
-         </div>-->
-
-                    </div>
-                    <button class="ui-button ui-widget ui-corner-all" type="button" onclick="window.localStorage.DRRBSscorer = '';window.localStorage.DRRBS2scorer='';alert('Deleted all Saves. Please refresh this page.')">Delete all
-            Rubrics</button>
-
-                    <div>
-                        <br><br>
-                        <button class="ui-mini no-mobile" onclick=" document.getElementById('fileInputRB').click() ;
-                 maximumRB = window.localStorage.DRRBSscorer.split('&&&').length-1;">Import Shared Rubrics</button>
-
-                        <input onchange="setTimeout(function(){
-           document.getElementById('saveidRB').max = window.localStorage.DRRBSscorer.split('&&&').length-1;},300)" style=" position: fixed;
-        bottom: -10000px;
-        left: -100000px;" type="file" accept=".DRRB" id="fileInputRB">
-
-
-                        <button class="ui-mini no-mobile" onclick="download(window.localStorage.DRRBSscorer, day+'mysaves.DRRB','application/octet-stream')">Share
-              Rubrics</button>
+              
 
                         <script type="text/javascript">
                             function download(data, filename, type) {
@@ -424,35 +401,39 @@
                             var day = currentTime.getDate()
                         </script>
 
-                        <h3>Past Rubrics:</h3>
-                        <div id="pastRB">
+<button onclick="downloadScore();" id="saverTscorer" type="button" >Download Rubric</button>
 
-                        </div>
+<input onchange="" style=" position: fixed;
+ bottom: -10000px;
+ left: -100000px;" type="file" accept=".TDRIP" id="fileInput">
+
+<button id="importText" class="ui-mini no-mobile" onclick=" document.getElementById('fileInput').click()">Load Rubric</button>
+<script>
+    fileInput.addEventListener('change', function(e) {
+    var file = fileInput.files[0];
+    var textType = /text.*/;
+
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+        data = reader.result;
+        //alert(data)
+
+        loadScore(data)
+    }
+
+    reader.readAsText(file);
+
+});
+</script>
+
+
                         <br><br><br>
                     </div>
                 </div>
 
 
 
-
-
-            </div>
-
-
-
-
-            <div class="no-print no-tournament" data-role="navbar">
-                <div data-hide-during-focus="" data-tap-toggle="false" data-role="header" data-position="fixed">
-
-                    <ul>
-                        <li><a id="savesTitle" class="ui-btn-active"  href="#tabs-1">Core Values</a></li>
-                        <li><a id="scorerTitle" href="#tabs-2">Innovation Project</a></li>
-                        <li><a id="timersTitle" href="#tabs-3">Robot Design</a></li>
-                        <li><a id="savesTitle" href="#tabs-4">Save</a></li>
-
-                    </ul>
-                </div>
-            </div>
 
         </div>
 
@@ -461,10 +442,9 @@
 
             <!--  <text id="tournamentText">Tournament</text><br><br>-->
 
-            <text id="revisionText">Rubrics v1.0.1 <!--(Scorer </text> <text id="versionText">v3.6.0</text>)-->
-            <!-- Scorer v3.6.0 --> <!--version 1.0.1-->
+            <text id="revisionText">Rubrics v1.1.0 (Scorer </text> <text id="versionText">v3.6.0</text>)
+            <!-- Scorer v3.5.0 -->
             <br>
-            A version of these rubrics with added features needed for a tournament can be found <a href='tournament.html' data-ajax='false'>here</a>.
             <br><text id="copyrightText">Copyright (c) FLLTutorials.com</text><br>
             <br>
             <text id="translatorCredit"></text>
@@ -474,7 +454,7 @@
         <br>
     </div>
 
-<script src="runtime-es2015.js" type="module"></script><script src="runtime-es5.js" nomodule defer></script><script src="polyfills-es5.js" nomodule defer></script><script src="polyfills-es2015.js" type="module"></script><script src="styles-es2015.js" type="module"></script><script src="styles-es5.js" nomodule defer></script><script src="vendor-es2015.js" type="module"></script><script src="vendor-es5.js" nomodule defer></script><script src="main-es2015.js" type="module"></script><script src="main-es5.js" nomodule defer></script></body>
+</body>
 
 <script>
     window.onload = function() {
@@ -486,25 +466,7 @@
         // check_missions('piperemoval');
         // recalc(0,'piperemoval',0);
 
-        var fileInputRB = document.getElementById('fileInputRB');
-
-        fileInputRB.addEventListener('change', function(e) {
-            var file = fileInput.files[0];
-            var textType = /text.*/;
-
-            var reader = new FileReader();
-
-            reader.onload = function(e) {
-                data = reader.result;
-                //alert(data)
-
-                window.localStorage.DRRBSscorer = data;
-                maximumRB = window.localStorage.DRRBSscorer.split('&&&').length - 1
-            }
-
-            reader.readAsText(file);
-
-        });
+    
 
     }
 </script>
@@ -629,142 +591,11 @@
         document.body.classList.toggle('dark', shouldAdd);
     }
 </script>
-<div id="styleBlank"></div>
 <script>
-
     function checkDarkTheme() {
-        var ua = window.navigator.userAgent;
-        var isIE = /MSIE|Trident/.test(ua);
-
-        if (!isIE) {
-            // Android fix for enabling dark mode, see native implementation in MainActivity.java
-            if (window.navigator.userAgent.includes('AndroidDarkMode')) {
-                document.getElementById("styleBlank").innerHTML = " <style>\
-       .timer {\
-            border: 10px solid #121212;\
-            border-collapse: collapse;\
-        }\
-        .ui-radio-off {\
-            background-color: #121212 !important;\
-            color: white !important;\
-            text-shadow: none !important;\
-        }\
-        .ui-btn {\
-            background-color: #121212 !important;\
-            color: white !important;\
-            text-shadow: none !important;\
-        }\
-        .ui-btn-active {\
-            background-color: #8aac4a !important;\
-            color: white !important;\
-            text-shadow: none !important;\
-        }\
-        .ui-radio-on {\
-            background-color: #8aac4a !important;\
-            color: white !important;\
-            text-shadow: none !important;\
-        }\
-        #timerChild {\
-            border: 10px solid white !important;\
-        }\
-        #stopwatchChild {\
-            border: 10px solid white !important;\
-        }\
-        #contentload {\
-            background-color: #121212 !important;\
-            color: white;\
-            text-shadow: none;\
-        }\
-        #wholeBody {\
-            background-color: #121212 !important;\
-        }\
-        .ui-popup {\
-            background-color: #121212 !important;\
-        }\
-        Table {\
-            border: 1px solid white !important;\
-        }\
-        Text {\
-            color: white !important;\
-            fill: white !important;\
-            text-shadow: none;\
-        }\
-        .timer {\
-            border: 10px solid white !important;\
-        }\
-        .ui-page {\
-            background-color: #121212 !important;\
-        }\
-        #loadingGif {\
-            background-color: #121212 !important;\
-        }\
-        #savesTitle {\
-            background-color: #121212 !important;\
-            color: white !important;\
-            text-shadow: none !important;\
-        }\
-        #saves {\
-            background-color: #121212 !important;\
-            color: white !important;\
-            text-shadow: none !important;\
-        }\
-</style>"
-                    // Apply dark theme or set theme css variables to dark
-                    /*	  i = 0
-                          while (i<document.getElementsByClassName("timer").length) {
-                              document.getElementsByClassName("timer")[i].style.border = "10px solid #121212"
-                              i=i+1
-                          }
-                          i = 0
-                          while (i<document.getElementsByClassName("ui-radio-off").length) {
-                              document.getElementsByClassName("ui-radio-off")[i].style.backgroundColor = "#121212"
-                              document.getElementsByClassName("ui-radio-off")[i].style.color = "white"
-                              document.getElementsByClassName("ui-radio-off")[i].style.textShadow = "none"
-                              i=i+1
-                          }
-                          i = 0
-                          while (i<document.getElementsByClassName("ui-btn").length) {
-                              document.getElementsByClassName("ui-btn")[i].style.backgroundColor = "#121212"
-                              document.getElementsByClassName("ui-btn")[i].style.color = "white"
-                              document.getElementsByClassName("ui-btn")[i].style.textShadow = "none"
-                              i=i+1
-                          }
-                          i = 0
-                          while (i<document.getElementsByClassName("ui-btn-active").length) {
-                              document.getElementsByClassName("ui-btn-active")[i].style.backgroundColor = "#8aac4a"
-                              document.getElementsByClassName("ui-btn-active")[i].style.color = "white"
-                              document.getElementsByClassName("ui-btn-active")[i].style.textShadow = "none"
-                              i=i+1
-                          }
-                          i = 0
-                          while (i<document.getElementsByClassName("ui-radio-on").length) {
-                              document.getElementsByClassName("ui-radio-on")[i].style.backgroundColor = "#8aac4a"
-                              document.getElementsByClassName("ui-radio-on")[i].style.color = "white"
-                              document.getElementsByClassName("ui-radio-on")[i].style.textShadow = "none"
-                              i=i+1
-                          }
-
-                          document.getElementById("timerChild").style.border = "10px solid white !important"
-                          document.getElementById("stopwatchChild").style.border = "10px solid white !important"
-                          document.getElementById("contentload").style.backgroundColor = "#121212"
-                          document.getElementById("contentload").style.color = "white"
-                          document.getElementById("contentload").style.textShadow = "none"
-                          document.getElementById("wholeBody").style.backgroundColor = "#121212"
-                          i = 0
-                          while (i<document.getElementsByClassName("ui-popup").length) {
-                              document.getElementsByClassName("ui-popup")[i].style.backgroundColor = "#8aac4a"
-                              i=i+1
-                          }
-                          */
-                return true;
-            } else {
-                document.getElementById("styleBlank").innerHTML = ""
-                return false
-            }
-        }
+        return false
     }
-</script>
-<script>
+
     function initpage() {
         languageInit()
         checkDarkTheme()
@@ -901,12 +732,14 @@
 
         // displaysaves()
         // drawBasic()
-
+        try {
+            tournamentload()
+        } catch {}
+        
         document.getElementById('contentload').style.display = 'block'
         document.getElementById('loadingGif').style.display = 'none'
-        try {
-            displayRBSaves()
-        } catch {}
+
+      
         rubricCalc()
 
         checkDarkTheme()

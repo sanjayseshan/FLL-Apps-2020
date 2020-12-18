@@ -207,7 +207,7 @@ function closeRow() {
 
 function addOption(name, value, id) {
     addToBuffer('<td class="rbtd" style="border:1px solid black;">\
-      <label for="'+name+id+'" class="ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-radio-off"><span class="ui-btn-text">'+value+'</span> </label>\
+      <label for="'+name+id+'" class="ui-btn ui-radio-off"><span class="ui-btn-text">'+value+'</span> </label>\
               <input data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="null" data-iconpos="null" data-theme="c" onclick="rubricCalc()" value="'+id+'" class="rbitem" type="radio" name="'+name+'" id="'+name+id+'">\
     </td>')
 }
@@ -221,7 +221,7 @@ function addCVOption(name, value, id) {
 
 function addFreeOption(name, id) {
     addToBuffer('<td class="rbtd" style="border:1px solid black;">\
-    <label for="'+name+id+'" class="ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-radio-off">      <textarea class="rbitem" id="text'+name+'" cols="50" height="100%"></textarea>\
+    <label for="'+name+id+'" class="ui-btn ui-radio-off">      <textarea class="rbitem" id="text'+name+'" cols="50" height="100%"></textarea>\
     </label>\
     \
     \
