@@ -280,7 +280,7 @@ function addESection(text1, text2) {
 
 function addESubSection(description, color, children) {
     addToBuffer('<td class="rbtd" style="height:40px;border:1px solid black;color: white !important;" colspan="5" bgcolor="'+color+'">\
-      <div style="display: flex;"><div style="margin-left:5px;flex: 0 0 95%;">  '+description+'   </div> <div style="text-align:right;color:red;flex:1;margin-right:5px;">  <b style="text-align:right; color:red" id="'+ssecct+description.split(" ")[0]+'"></b>  </div>    \
+      <div style="display: flex;"><div style="margin-left:5px;flex: 0 0 95%;">  '+description+'   </div> <div style="display:none;text-align:right;color:red;flex:1;margin-right:5px;">  <b style="text-align:right; color:red" id="'+ssecct+description.split(" ")[0]+'"></b>  </div>    \
     </td>')
     rbchildren.push([ssecct+description.split(" ")[0],children])
     ssecct = ssecct+1

@@ -282,24 +282,20 @@
         <div data-role="tabs">
 
 
-            <div id="tabs-1">
+            <!-- <div id="tabs-1"> -->
                 <form>
 
                     <div id="cvlist" style="max-width: 1024px;">
                         <script src="assets/rubric.js"></script>
 
                     </div>
-                    <button onclick="setTimeout(function()
-        {
-          rubricCalc()
-    
-        }, 100);" style="max-width: 500px" type="reset">Reset</button>
+                   
                 </form>
                 
-            </div>
+            <!-- </div> -->
 
             
-            <div id="tabs-4">
+            <div id="tabs-4" class="no-print">
 
                 <div style="max-width:500px">
 
@@ -423,15 +419,24 @@
                 </div>
 
 
-
+                <div class="no-print no-tournament" data-role="navbar">
+                    <div data-hide-during-focus="" data-tap-toggle="false" data-role="header" data-position="fixed">
+        
+                        <ul>
+                            <li><a id="timersTitle" class="ui-btn-active" href="#tabs-2">Rubric</a></li>
+                            <li><a id="scorerTitle" href="#tabs-1">Awards</a></li>
+                            <li><a id="savesTitle" href="#tabs-4">Download</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+            </div>
+    
 
 
             </div> 
 
 
-
-
-        </div>
 
         <noscript>Please enable JavaScript to continue using this application.</noscript>
         <div style="padding-left: 10px; " class="no-print">

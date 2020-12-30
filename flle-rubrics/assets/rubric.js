@@ -26,6 +26,7 @@ var load2020CV = (function () {
 	addToBuffer("<h1>Reviewing Sheet</h1>")
 	addToBuffer("<p>Instructions: Reviewers are required to tick one box on each separate line to indicate the team’s achievement.")
 
+	addToBuffer('<div id="tabs-1">')
 	addEStrengths(
 		"Challenge Solution Award -  These teams showed excellent problem-solving skills to create an innovative and helpful solution to the challenge.",
 		"Coding Award - These teams gave effective explanations about how their code made their team models move and showed good communication skills.",
@@ -34,6 +35,9 @@ var load2020CV = (function () {
 		"Team Model Award - These teams displayed innovation and creativity through the design and building of their team models.",
 		""
 	)
+	addToBuffer('</div>')
+
+	addToBuffer('<div id="tabs-2">')
 
 	startRubric()
 
@@ -134,7 +138,15 @@ var load2020CV = (function () {
 
 	endRubric()	
 
-	addToBuffer("Total Points: <b style='color:red;' id='cvpts'></b>")
+	addToBuffer(' <button class="no-print" onclick="setTimeout(function()\
+	{\
+	  rubricCalc()\
+\
+	}, 100);" style="max-width: 500px" type="reset">Reset</button>')
+
+	addToBuffer('</div>')
+
+	addToBuffer("<i style='display:none'>Total Points: <b style='color:red;' id='cvpts'></b></i>")
 
 	/*
 	window.onload = function() {

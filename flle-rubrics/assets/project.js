@@ -127,7 +127,7 @@ var load2020RP = (function () {
 
 	endRubric()
 
-	addToBuffer("Total Points: <b style='color:red;' id='projpts'></b>")
+	addToBuffer("<i style='display:none'>Total Points: <b style='color:red;' id='projpts'></b></i>")
 
 	
 	/*
